@@ -1,0 +1,27 @@
+year,average_usd,series,note,flag
+1970,41000,AP/NFLPA series,,
+1972,45000,AP/NFLPA series,,
+1974,56000,AP/NFLPA series,,
+1976,78000,AP/NFLPA series,,
+1978,100000,AP/NFLPA series,,
+1980,117000,AP/NFLPA series,,
+1982,157000,AP/NFLPA series,,
+1984,279000,AP/NFLPA series,USFL bidding war,
+1986,288000,AP/NFLPA series,,
+1988,307000,AP/NFLPA series,,
+1989,389000,AP/NFLPA series,,
+1990,430000,AP/NFLPA series,,
+1991,488000,AP/NFLPA series,,
+1992,551000,AP/NFLPA series,,
+1993,729000,AP/NFLPA series,Free agency starts,
+1994,674000,AP/NFLPA series,First capped year,
+1995,752000,AP/NFLPA series,,
+1996,807000,AP/NFLPA series,,
+1997,725000,AP/NFLPA series,,
+1998,1000000,AP/NFLPA series,,
+1999,1043000,AP/NFLPA series,,
+1969,25000,Expensivity,"About $25,000 (Expensivity, citing the Kentucky Pro Football Hall of Fame)",
+1974,27500,Expensivity,"$36,444 with bonuses; conflicts with the AP/NFLPA series",conflict
+1977,55000,Expensivity,Conflicts with the AP/NFLPA series,conflict
+1978,62535,Expensivity,Conflicts with the AP/NFLPA series ($100K),conflict
+2026,4300000,"nflverse/OTC mean APY, active contracts","Mean average-per-year of 2,545 active contracts; median $1.27M",derived

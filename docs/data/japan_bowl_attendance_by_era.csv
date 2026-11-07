@@ -1,0 +1,22 @@
+event,era_start,era_end,format,venue,typical_low,typical_high,highs_and_lows
+Rice Bowl,1948,1958,East-West college all-stars,"Nile Kinnick / Jingu, Korakuen",5000,15000,"40,000 in 1955"
+Rice Bowl,1959,1983,East-West college all-stars,Mostly National Stadium,7000,30000,"3,000 (1959); 30,000 (1974)"
+Rice Bowl,1984,1991,College champion vs corporate champion,National Stadium,28000,52000,"48,000 (1988), 52,000 (1991)"
+Rice Bowl,1992,2001,College champion vs corporate champion,Tokyo Dome,30000,56000,"56,000 (1992, record); 54,000 (1993, 1995)"
+Rice Bowl,2002,2020,College champion vs corporate champion,Tokyo Dome,25000,36000,"35,750 (2011); 25,059 (2012)"
+Rice Bowl,2021,2021,College champion vs corporate champion (COVID limits),Tokyo Dome,8851,8851,
+Rice Bowl,2022,2026,Corporate vs corporate,Tokyo Dome,14610,20214,"14,610 (2022); 20,214 (2026)"
+Koshien Bowl,1947,1963,College final,Koshien Stadium,700,5000,Many years not recorded; 700 (1947)
+Koshien Bowl,1966,1975,College final,Koshien Stadium,10000,28000,
+Koshien Bowl,1976,1991,College final,Koshien Stadium,30000,45000,"45,000 (1991, record); 42,000 (1990)"
+Koshien Bowl,1992,2006,College final,Koshien Stadium,23000,41000,"23,000 (1998, 2000, 2005)"
+Koshien Bowl,2007,2019,College final,Koshien Stadium,20000,36000,"20,000 (2008); 36,000 (2017)"
+Koshien Bowl,2020,2021,College final (COVID),Koshien Stadium,9000,12000,
+Koshien Bowl,2022,2025,College final,Koshien Stadium,16000,24000,"16,000 (2022), 24,000 (2025)"
+Corporate final,1987,1987,Tokyo Super Bowl,Yokohama Stadium,6500,6500,
+Corporate final,1988,1992,Tokyo Super Bowl,Tokyo Dome,38000,53000,"53,000 in 1991 (sold out, record)"
+Corporate final,1993,1998,Tokyo Super Bowl / Japan X Bowl,,28000,38500,
+Corporate final,1999,2003,Japan X Bowl,,21500,25000,After the bubble
+Corporate final,2004,2008,Japan X Bowl,Partly Kobe and Osaka,12327,17629,
+Corporate final,2009,2019,Japan X Bowl,,18353,25457,
+Corporate final,2020,2020,Japan X Bowl (COVID),,6113,6113,Rice Bowl took over the title game from 2021

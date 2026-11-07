@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview | NFL and Japan Football History</title>
+<meta name="description" content="A data-driven history of the NFL and of American football in Japan, compiled from public sources.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">NFL and Japan Football History</a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="index.html" aria-current="page">Overview</a></li>
+        <li><a href="nfl.html">NFL history</a></li>
+        <li><a href="japan.html">Football in Japan</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="top">
+
+<h1>NFL and Japan Football History</h1>
+<p class="lede">A data-driven history of the National Football League, from a 1920 meeting in an Ohio car showroom to a $300M salary cap, and of American football in Japan, from a 1934 student league in Tokyo to a sport of about 13,000 registered players today.</p>
+<p class="compiled">Compiled November 2026 from public sources.</p>
+<div class="honesty" role="note">
+  <strong>Data honesty:</strong> these are research notes compiled from public sources, not official NFL or JAFA data. Numbers are copied as the sources give them. Values that are unconfirmed, conflicting or seen only in a search snippet stay in the text and in the CSV note columns, and are left out of the charts. Missing years are missing, not zero. <a href="methodology.html">How the research was done</a>.
+</div>
+
+<section aria-label="Headline figures" class="tiles">
+
+  <div class="tile">
+    <div class="value">127.7M</div>
+    <div class="label">US viewers for Super Bowl LIX (2025), the US TV record</div>
+    <div class="sub">Super Bowl I drew 51.18M in 1967</div>
+  </div>
+
+  <div class="tile">
+    <div class="value">$301.2M</div>
+    <div class="label">Salary cap per team, 2026: the first above $300M</div>
+    <div class="sub">$34.6M when the cap began in 1994</div>
+  </div>
+
+  <div class="tile">
+    <div class="value">62</div>
+    <div class="label">Regular-season games played abroad, 2005 to Nov 2026</div>
+    <div class="sub">None in Asia; a record 9 scheduled in 2026</div>
+  </div>
+
+  <div class="tile">
+    <div class="value">14</div>
+    <div class="label">NFL games played in Japan, all exhibitions</div>
+    <div class="sub">From 1976 to 2005; none since</div>
+  </div>
+
+  <div class="tile">
+    <div class="value">13,387</div>
+    <div class="label">Registered football players in Japan, FY2024</div>
+    <div class="sub">Peak: 20,683 in 1992</div>
+  </div>
+
+  <div class="tile">
+    <div class="value">20,214</div>
+    <div class="label">Rice Bowl crowd, January 2026</div>
+    <div class="sub">Record: 56,000 in 1992</div>
+  </div>
+
+</section>
+
+<div class="two-col">
+  <div class="card">
+    <h3>The NFL story</h3>
+    <p>The league began in 1920 as a pact between local club owners. Television made it national: the 1961 Sports Broadcasting Act let clubs pool their TV rights, and Pete Rozelle turned that money into equal revenue sharing, the AFL merger and the Super Bowl. The 1993 labor deal traded free agency for a salary cap that has grown almost ninefold since 1994. Since 2007 the league has played regular-season games abroad, a record nine of them in 2026, and the concussion crisis of the 2000s led to a settlement that has awarded over $1.7B.</p>
+    <p><a href="nfl.html">Read the NFL history</a></p>
+  </div>
+  <div class="card">
+    <h3>Football in Japan</h3>
+    <p>An American missionary, Paul Rusch, organised the first student league in Tokyo in 1934, and Japanese-American Nisei from Hawaii made up most of the early players. After the war, newspaper-sponsored bowls (the Koshien Bowl, the Rice Bowl) and US service games built the sport. It peaked in the bubble years: about 20,700 registered players in 1992, 56,000 at the Rice Bowl and NFL games every week on two networks. About 13,400 players are registered today, the X League is rebuilding after a 2026 governance crisis, and flag football is growing ahead of the LA28 Olympics.</p>
+    <p><a href="japan.html">Read the Japan history</a></p>
+  </div>
+</div>
+
+<h2>Key charts</h2>
+<div class="chart-grid">
+<figure class="chart" id="chart-super-bowl">
+  <div class="chart-title">Super Bowl average US TV audience, 1967-2026 (millions)</div>
+  
+  <div class="plot" data-chart="super-bowl" role="img" aria-label="Chart: Super Bowl average US TV audience, 1967-2026 (millions). The same data is in the nearby table and the CSV."></div>
+  <figcaption><span class="caveat">Nielsen counted more streaming and out-of-home viewing from the 2025 season, which helped the 2025-26 records; Super Bowl LX is NBC only (Nielsen&#39;s all-platform figure is 125.6M).</span> Data: <a href="data.html#super_bowl_us_audience">Super Bowl US TV audience, I (1967) to LX (2026)</a> (<a href="data/super_bowl_us_audience.csv">CSV</a>).</figcaption>
+</figure><figure class="chart" id="chart-salary-cap">
+  <div class="chart-title">NFL salary cap per team, 1994-2026 (US$ millions)</div>
+  
+  <div class="plot" data-chart="salary-cap" role="img" aria-label="Chart: NFL salary cap per team, 1994-2026 (US$ millions). The same data is in the nearby table and the CSV."></div>
+  <figcaption><span class="caveat">2010 was an uncapped year, so it has no bar. Nominal dollars; Spotrac differs slightly in four years (see the table).</span> Data: <a href="data.html#nfl_salary_cap">NFL salary cap by year, 1994-2026</a> (<a href="data/nfl_salary_cap.csv">CSV</a>).</figcaption>
+</figure><figure class="chart" id="chart-intl-games">
+  <div class="chart-title">NFL regular-season games played outside the US, by year</div>
+  
+  <div class="plot" data-chart="intl-games" role="img" aria-label="Chart: NFL regular-season games played outside the US, by year. The same data is in the nearby table and the CSV."></div>
+  <figcaption><span class="caveat">Counts games played by the compile date: three more 2026 games (Madrid, Munich, Mexico City) were scheduled for November. &#39;Elsewhere&#39; is Brazil, Ireland, Spain, Australia and France. None has been played in Asia.</span> Data: <a href="data.html#nfl_international_games">NFL regular-season games outside the US, 2005-2026</a> (<a href="data/nfl_international_games.csv">CSV</a>).</figcaption>
+</figure><figure class="chart" id="chart-nfl-japan-games">
+  <div class="chart-title">NFL games in Japan, 1976-2005: 14 games, one reported crowd</div>
+  
+  <div class="plot" data-chart="nfl-japan-games" role="img" aria-label="Chart: NFL games in Japan, 1976-2005: 14 games, one reported crowd. The same data is in the nearby table and the CSV."></div>
+  <figcaption><span class="caveat">Only the 1976 crowd (38,000) was found as a single figure. 1989 has two conflicting reports (43,000 vs more than 45,000) and is shown as not found; crowds for 1990-2005 were not found.</span> Data: <a href="data.html#nfl_games_in_japan">NFL games in Japan, 1976-2005</a> (<a href="data/nfl_games_in_japan.csv">CSV</a>).</figcaption>
+</figure><figure class="chart" id="chart-japan-players">
+  <div class="chart-title">Registered American football players in Japan</div>
+  
+  <div class="plot" data-chart="japan-players" role="img" aria-label="Chart: Registered American football players in Japan. The same data is in the nearby table and the CSV."></div>
+  <figcaption><span class="caveat">Two counting methods are mixed (JAFA history pages and the SSF survey); the gaps between points are years with no figure. FY2020 (15,756) and FY2022 (13,809) rest on one secondary summary and are not plotted.</span> Data: <a href="data.html#japan_registered_players">Japan registered American football players over time</a> (<a href="data/japan_registered_players.csv">CSV</a>).</figcaption>
+</figure>
+</div>
+
+<h2>What is on this site</h2>
+<ul>
+  <li><a href="nfl.html">NFL history</a>: nine topic sections, from the timeline to viewership and fans.</li>
+  <li><a href="japan.html">Football in Japan</a>: eight topic sections, from the 1934 founding to TV, crowds and online interest.</li>
+  <li><a href="people.html">Important people</a>: the major names behind both stories.</li>
+  <li><a href="data.html">Data</a>: 27 tidy CSV datasets with descriptions, sources and confidence ratings.</li>
+  <li><a href="methodology.html">Methodology</a>: sources, how numbers were gathered and checked, markers, confidence and known gaps.</li>
+</ul>
+
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <p>Compiled November 2026 from public sources. Research notes, not official NFL or JAFA data. Figures link to the sources they came from; the <a href="methodology.html">methodology</a> explains how they were gathered and how far to trust them.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<script id="chart-data" type="application/json">{"super-bowl": {"traces": [{"type": "scatter", "mode": "lines", "x": [1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "y": [51.18, 39.12, 41.66, 44.27, 46.04, 56.64, 53.32, 51.7, 56.05, 57.71, 62.05, 78.94, 74.74, 76.24, 68.29, 85.24, 81.77, 77.62, 85.53, 92.57, 87.19, 80.14, 81.59, 73.85, 79.51, 79.59, 90.99, 90, 83.42, 94.08, 87.87, 90, 83.72, 88.47, 84.34, 86.8, 88.64, 89.8, 86.07, 90.75, 93.18, 97.45, 98.73, 106.48, 111.04, 111.35, 108.69, 112.19, 114.44, 111.86, 111.32, 103.47, 98.48, 101.32, 95.2, 99.18, 114.21, 120.25, 127.7, 124.9], "text": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX", "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL", "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "50", "LI", "LII", "LIII", "LIV", "LV", "LVI", "LVII", "LVIII", "LIX", "LX"], "name": "Super Bowl", "color": 1, "hovertemplate": "Super Bowl %{text} (%{x})<br>%{y} million viewers<extra><\/extra>"}], "layout": {"yaxis": {"title": "Million viewers", "range": [0, 140]}, "hovermode": "x", "annotations": [{"x": 2025, "y": 127.7, "text": "LIX 2025: 127.7M", "showarrow": true, "ax": -60, "ay": -6}]}}, "salary-cap": {"traces": [{"type": "bar", "x": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "y": [34.6, 37.1, 40.8, 41.5, 52.4, 57.3, 63.2, 67.4, 71.1, 75, 80.6, 85.5, 102, 109, 116, 128, 120, 120.6, 123, 133, 143.28, 155.27, 167, 177.2, 188.2, 198.2, 182.5, 208.2, 224.8, 255.4, 279.2, 301.2], "name": "Salary cap", "color": 1, "hovertemplate": "%{x}: $%{y}M<extra><\/extra>"}], "layout": {"yaxis": {"title": "US$ millions"}, "xaxis": {"dtick": 4}}}, "intl-games": {"traces": [{"type": "bar", "x": [2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026], "y": [0, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 4, 3, 4, 2, 3, 3, 3, 3, 3], "name": "UK", "color": 1, "hovertemplate": "%{x}: %{y} game(s) in UK<extra><\/extra>"}, {"type": "bar", "x": [2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026], "y": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0], "name": "Mexico", "color": 2, "hovertemplate": "%{x}: %{y} game(s) in Mexico<extra><\/extra>"}, {"type": "bar", "x": [2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026], "y": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 1, 0], "name": "Germany", "color": 3, "hovertemplate": "%{x}: %{y} game(s) in Germany<extra><\/extra>"}, {"type": "bar", "x": [2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026], "y": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 3], "name": "Elsewhere", "color": 4, "hovertemplate": "%{x}: %{y} game(s) in Elsewhere<extra><\/extra>"}], "layout": {"barmode": "stack", "legend": {"traceorder": "normal"}, "yaxis": {"title": "Games", "dtick": 1}, "xaxis": {"dtick": 2}}}, "nfl-japan-games": {"traces": [{"type": "bar", "x": ["1976"], "y": [38000], "customdata": [["Cardinals 20, Chargers 10 (Mainichi Star Bowl)", "Korakuen Stadium"]], "name": "Crowd reported", "color": 1, "width": 0.6, "hovertemplate": "%{x}: %{customdata[0]}<br>%{customdata[1]}<br>%{y:,} fans<extra><\/extra>"}, {"type": "scatter", "mode": "markers", "x": ["1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1998", "2000", "2002", "2003", "2005"], "y": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "customdata": [["Rams 16, 49ers 13 (OT)", "Tokyo Dome", "43,000 sold out (Washington Post, search result) vs more than 45,000 (UPI) [conflict]"], ["Broncos 10, Seahawks 7", "Tokyo Dome", "Attendance not found"], ["Dolphins 19, Raiders 17", "Tokyo Dome", "Attendance not found"], ["Oilers 34, Cowboys 23", "Tokyo Dome", "Attendance not found. JAFA lists Oilers vs Cowboys; the score was read from the layout of English Wikipedia's table, though the Japan research found the game missing from that list [conflict]"], ["Saints 28, Eagles 16", "Tokyo Dome", "Attendance not found"], ["Vikings 17, Chiefs 9", "Tokyo Dome", "Attendance not found"], ["Broncos 24, 49ers 10", "Tokyo Dome", "Attendance not found"], ["Chargers 20, Steelers 10", "Tokyo Dome", "Attendance not found. 3 Japanese players took part"], ["Packers 27, Chiefs 24", "Tokyo Dome", "Attendance not found"], ["Falcons 20, Cowboys 9", "Tokyo Dome", "Attendance not found"], ["Redskins 38, 49ers 7", "Osaka Dome", "Attendance not found. JAFA gives Aug 4 Japan time; English Wikipedia Aug 3"], ["Buccaneers 30, Jets 14", "Tokyo Dome", "Attendance not found"], ["Falcons 27, Colts 21", "Tokyo Dome", "Attendance not found. Last NFL game in Japan to date; date given only as August 2005"]], "name": "Crowd not found", "color": "muted", "marker": {"symbol": "circle-open", "size": 10}, "hovertemplate": "%{x}: %{customdata[0]}<br>%{customdata[1]}<br>%{customdata[2]}<extra><\/extra>"}], "layout": {"xaxis": {"type": "category", "title": "Year"}, "yaxis": {"title": "Attendance", "rangemode": "tozero"}}}, "japan-players": {"traces": [{"type": "scatter", "mode": "markers+text", "x": [1934, 1992, 1996, 2000, 2010, 2024], "y": [66, 20683, 16682, 15649, 19552, 13387], "text": ["66", "20,683", "16,682", "15,649", "19,552", "13,387"], "textposition": "top center", "customdata": [["1934", "JAFA history page"], ["1992", "JAFA history page"], ["1996", "JAFA history page"], ["2000", "JAFA history page"], ["2010 / FY2010", "JAFA 2010 page (teams); SSF FY2010 (players)"], ["FY2024", "SSF survey 2024 (opened directly)"]], "name": "Players", "color": 1, "marker": {"size": 10}, "hovertemplate": "%{customdata[0]}: %{y:,} players<br>%{customdata[1]}<extra><\/extra>"}], "layout": {"yaxis": {"title": "Registered players", "rangemode": "tozero"}, "xaxis": {"range": [1925, 2032]}}}}</script>
+<script src="assets/charts.js"></script>
+
+</body>
+</html>

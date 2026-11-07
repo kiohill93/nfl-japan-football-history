@@ -1,0 +1,13 @@
+season,teams,total_attendance,per_game_avg,note,flag
+1934,11,701884,,,
+1940,10,1278599,,,
+1950,13,2117747,27000,"About 27,000 a game over 78 games",derived
+1960,13,3000000,,About 3M (Rozelle's first year),
+1989,28,17000000,,About 17M (Rozelle's last year),
+2000,31,16351740,65900,"About 65,900 over 248 games",derived
+2010,32,17140859,67000,"About 67,000 over 256 games",derived
+2019,32,17040039,66600,"About 66,600",derived
+2020,32,,,COVID: mostly empty stadiums,
+2023,32,,69582,Record average per Statistico,
+2024,32,18755380,69000,"About 69,000 over 272 games",derived
+2025,32,18781145,69000,"Record total; about 69,000 a game",derived

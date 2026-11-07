@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>{{ heading }}</h1>
+{% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+<p class="compiled">{{ compiled }}.</p>
+{% include "_banner.html" %}
+{% if sections|length > 1 %}
+<nav class="toc" aria-label="Sections">
+  <strong>Sections</strong>
+  <ol>
+  {% for s in sections %}<li><a href="#{{ s.id }}">{{ s.title }}</a></li>{% endfor %}
+  </ol>
+</nav>
+{% endif %}
+{% for s in sections %}
+<section id="{{ s.id }}">
+{{ s.html | safe }}
+{% if sections|length > 1 %}<p class="back-top"><a href="#top">Back to top</a></p>{% endif %}
+</section>
+{% endfor %}
+{% endblock %}

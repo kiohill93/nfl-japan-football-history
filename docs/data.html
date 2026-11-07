@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data | NFL and Japan Football History</title>
+<meta name="description" content="Every dataset behind the site, with sources and CSV downloads.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">NFL and Japan Football History</a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="nfl.html">NFL history</a></li>
+        <li><a href="japan.html">Football in Japan</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="data.html" aria-current="page">Data</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="top">
+
+<h1>Data</h1>
+<p class="lede">27 datasets extracted from the research tables. Each is a tidy CSV with one row per observation. The full catalogue, with columns, units, sources, confidence and caveats, is in <a href="data/catalog.json">catalog.json</a>.</p>
+<p class="compiled">Compiled November 2026 from public sources.</p>
+<div class="honesty" role="note">
+  <strong>Data honesty:</strong> these are research notes compiled from public sources, not official NFL or JAFA data. Numbers are copied as the sources give them. Values that are unconfirmed, conflicting or seen only in a search snippet stay in the text and in the CSV note columns, and are left out of the charts. Missing years are missing, not zero. <a href="methodology.html">How the research was done</a>.
+</div>
+<nav class="toc" aria-label="Datasets">
+  <strong>Datasets</strong>
+  <ol>
+  <li><a href="#super_bowl_us_audience">Super Bowl US TV audience, I (1967) to LX (2026)</a></li><li><a href="#nfl_regular_season_tv">NFL regular-season TV averages</a></li><li><a href="#nfl_salary_cap">NFL salary cap by year, 1994-2026</a></li><li><a href="#nfl_average_salary">NFL average salary over time</a></li><li><a href="#nfl_minimum_salary">NFL minimum salary over time</a></li><li><a href="#nfl_league_revenue">NFL league revenue over time</a></li><li><a href="#nfl_national_revenue_per_team">NFL national money per team</a></li><li><a href="#nfl_media_rights_deals">National media-rights deals by era</a></li><li><a href="#nfl_franchise_values">NFL franchise values over time</a></li><li><a href="#nfl_league_size">NFL league size over time</a></li><li><a href="#nfl_international_games">NFL regular-season games outside the US, 2005-2026</a></li><li><a href="#nfl_games_in_japan">NFL games in Japan, 1976-2005</a></li><li><a href="#nfl_cte_brain_bank">CTE in donated brains of former NFL players (Boston University)</a></li><li><a href="#nfl_concussion_measures">NFL concussion settlement and safety figures</a></li><li><a href="#japan_registered_players">Japan registered American football players over time</a></li><li><a href="#japan_players_by_level">Japan registered players by level</a></li><li><a href="#japan_big_game_attendance">Japan big-game attendance: single games</a></li><li><a href="#japan_bowl_attendance_by_era">Japan bowl attendance by era</a></li><li><a href="#jafa_revenue_fy2025">JAFA income and spending, FY2025 (April 2025 - March 2026)</a></li><li><a href="#japan_sport_participation">Japan registered players by sport, FY2024</a></li><li><a href="#japanese_players_north_america">Japanese players in North American football and the NFL&#39;s pathways</a></li><li><a href="#japan_serious_accidents">Japan serious football accidents</a></li><li><a href="#japan_tv_ratings">Japan TV ratings found for football</a></li><li><a href="#nfl_season_attendance">NFL regular-season attendance over time</a></li><li><a href="#gallup_favorite_sport">Gallup: Americans&#39; favourite sport to watch</a></li><li><a href="#nfl_record_contracts">Record NFL contracts (highest average per year when signed)</a></li><li><a href="#ja_wikipedia_pageviews">Japanese Wikipedia pageviews for football articles</a></li>
+  </ol>
+</nav>
+
+<article class="ds" id="super_bowl_us_audience">
+  <h2>Super Bowl US TV audience, I (1967) to LX (2026)</h2>
+  <p class="meta"><span class="badge high">high confidence</span> &middot; 60 rows &middot; <code>data/super_bowl_us_audience.csv</code> &middot; topic: <a href="nfl.html#nfl-09">NFL history, section 09</a></p>
+  <p>Average US viewers for every Super Bowl, with the households rating and the average cost of a 30-second ad.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>super_bowl</code></td><td>—</td><td>Super Bowl number</td></tr><tr><td><code>year</code></td><td>year</td><td>Calendar year the game was played</td></tr><tr><td><code>network</code></td><td>—</td><td>Main US network(s)</td></tr><tr><td><code>viewers_m</code></td><td>millions of viewers</td><td>Average US viewers on the main network(s)</td></tr><tr><td><code>households_rating</code></td><td>rating points</td><td>Nielsen households rating</td></tr><tr><td><code>ad_30s_usd</code></td><td>US dollars (nominal)</td><td>Average 30-second ad</td></tr><tr><td><code>note</code></td><td>—</td><td>Split or range values that are not a single number</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Single compilation source (Wikipedia, using Nielsen data); not checked game by game against Nielsen.</li><li>From the 2025 season Nielsen counts more out-of-home and streaming viewing (Big Data + Panel), so 2025-26 figures are not fully comparable with older years.</li><li>Ad prices are nominal dollars, not adjusted for inflation.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://en.wikipedia.org/wiki/Super_Bowl_television_ratings">Wikipedia: Super Bowl television ratings (Nielsen data)</a></li><li><a href="https://www.nielsen.com/news-center/2026/super-bowl-lx-2026/">Nielsen, Feb 2026</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 60 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>super_bowl</th><th>year</th><th>network</th><th>viewers_m</th><th>households_rating</th><th>ad_30s_usd</th><th>note</th></tr></thead>
+    <tbody><tr><td>I</td><td>1967</td><td>CBS + NBC</td><td>51.18</td><td></td><td></td><td>Viewers 26.75 (CBS) + 24.43 (NBC); HH rating 22.6 (CBS) / 18.5 (NBC); ad $42.5K (CBS) / $37.5K (NBC)</td></tr><tr><td>II</td><td>1968</td><td>CBS</td><td>39.12</td><td>36.8</td><td>54500</td><td></td></tr><tr><td>III</td><td>1969</td><td>NBC</td><td>41.66</td><td>36.0</td><td>55000</td><td></td></tr><tr><td>IV</td><td>1970</td><td>CBS</td><td>44.27</td><td>39.4</td><td>78200</td><td></td></tr><tr><td>V</td><td>1971</td><td>NBC</td><td>46.04</td><td>39.9</td><td>72500</td><td></td></tr><tr><td>VI</td><td>1972</td><td>CBS</td><td>56.64</td><td>44.2</td><td>86100</td><td></td></tr><tr><td>VII</td><td>1973</td><td>NBC</td><td>53.32</td><td>42.7</td><td>88100</td><td></td></tr><tr><td>VIII</td><td>1974</td><td>CBS</td><td>51.70</td><td>41.6</td><td>103500</td><td></td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/super_bowl_us_audience.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_regular_season_tv">
+  <h2>NFL regular-season TV averages</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 10 rows &middot; <code>data/nfl_regular_season_tv.csv</code> &middot; topic: <a href="nfl.html#nfl-09">NFL history, section 09</a></p>
+  <p>Average US viewers per regular-season game: the record 1989 season, the 2016-17 dip and the 2025 season by TV package.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>season</code></td><td>year</td><td>Season</td></tr><tr><td><code>package</code></td><td>—</td><td>All games, or one TV package</td></tr><tr><td><code>avg_viewers_m</code></td><td>millions of viewers</td><td>Average US viewers per game</td></tr><tr><td><code>note</code></td><td>—</td><td>Context and marked values</td></tr><tr><td><code>source</code></td><td>—</td><td>Source for the row</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>No continuous year-by-year series was found in free sources; only the seasons listed here.</li><li>2025 figures use Nielsen&#39;s Big Data + Panel method, which raised recent numbers.</li><li>The 2015 figure is from a search snippet only, so it is kept in the note column.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://www.nfl.com/news/nfl-sees-second-highest-regular-season-average-viewership-since-1988">NFL.com, Jan 2026</a></li><li><a href="https://www.sportsmediawatch.com/2026/01/nfl-regular-season-viewership-cbs-nbc-top-season/">Sports Media Watch, Jan 2026</a></li><li><a href="https://www.sportsmediawatch.com/2018/02/nfl-ratings-decline-2017-analysis/">Sports Media Watch, 2018</a></li><li><a href="https://www.espn.com/nfl/story/_/id/21960086/nfl-television-ratings-97-percent-2017-regular-season">ESPN, Jan 2018</a></li><li><a href="https://espnpressroom.com/press-release/espns-monday-night-football-records-second-most-watched-regular-season-in-the-companys-20-year-history-of-airing-the-iconic-franchise/">ESPN Press Room</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 10 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>season</th><th>package</th><th>avg_viewers_m</th><th>note</th><th>source</th></tr></thead>
+    <tbody><tr><td>1989</td><td>All games</td><td>19.0</td><td>Record regular-season average (tracking began in 1988)</td><td>NFL.com, Jan 2026</td></tr><tr><td>2015</td><td>All games</td><td></td><td>17.9M [snippet: Sports Media Watch 2018]</td><td>Sports Media Watch 2018 (snippet)</td></tr><tr><td>2016</td><td>All games</td><td>16.5</td><td>-8% on 2015</td><td>ESPN, Jan 2018</td></tr><tr><td>2017</td><td>All games</td><td>14.9</td><td>-9.7% on 2016</td><td>ESPN, Jan 2018</td></tr><tr><td>2022</td><td>Amazon Thursday Night Football</td><td>9.58</td><td>Amazon&#39;s first exclusive TNF season</td><td>NFL.com, Jan 2026</td></tr><tr><td>2025</td><td>All games</td><td>18.7</td><td>+10% vs 2024; second only to 1989</td><td>NFL.com, Jan 2026</td></tr><tr><td>2025</td><td>CBS Sunday afternoon</td><td>21.25</td><td>Best on record; late national window 25.83M</td><td>NFL.com; Sports Media Watch</td></tr><tr><td>2025</td><td>NBC Sunday Night Football</td><td>23.5</td><td>Best since 2006; top prime-time show for the 15th straight year</td><td>NFL.com; Sports Media Watch</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_regular_season_tv.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_salary_cap">
+  <h2>NFL salary cap by year, 1994-2026</h2>
+  <p class="meta"><span class="badge high">high confidence</span> &middot; 33 rows &middot; <code>data/nfl_salary_cap.csv</code> &middot; topic: <a href="nfl.html#nfl-03">NFL history, section 03</a></p>
+  <p>The per-team salary cap each league year since it began under the 1993 labor deal.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>league year</td><td>League year</td></tr><tr><td><code>cap_usd_m</code></td><td>US$ millions</td><td>Cap per NFL Football Operations</td></tr><tr><td><code>spotrac_cap_usd_m</code></td><td>US$ millions</td><td>Spotrac&#39;s figure, only where it differs</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>2010 was an uncapped year, so it has no value.</li><li>Nominal dollars, not adjusted for inflation.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://operations.nfl.com/calendar-events/nfl-free-agency/nfl-salary-cap">NFL Football Operations: salary cap</a></li><li><a href="https://www.spotrac.com/nfl/cba/">Spotrac: NFL CBA</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 33 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>cap_usd_m</th><th>spotrac_cap_usd_m</th><th>note</th></tr></thead>
+    <tbody><tr><td>1994</td><td>34.6</td><td></td><td></td></tr><tr><td>1995</td><td>37.1</td><td></td><td></td></tr><tr><td>1996</td><td>40.8</td><td></td><td></td></tr><tr><td>1997</td><td>41.5</td><td></td><td></td></tr><tr><td>1998</td><td>52.4</td><td></td><td></td></tr><tr><td>1999</td><td>57.3</td><td></td><td></td></tr><tr><td>2000</td><td>63.2</td><td>62.17</td><td>Sources differ</td></tr><tr><td>2001</td><td>67.4</td><td></td><td></td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_salary_cap.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_average_salary">
+  <h2>NFL average salary over time</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 26 rows &middot; <code>data/nfl_average_salary.csv</code> &middot; topic: <a href="nfl.html#nfl-04">NFL history, section 04</a></p>
+  <p>Average player pay: the AP/NFLPA series for 1970-1999, Expensivity&#39;s lower figures for the late 1960s and 1970s, and the 2026 mean contract value.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>year</td><td>—</td></tr><tr><td><code>average_usd</code></td><td>US dollars (nominal)</td><td>Average pay</td></tr><tr><td><code>series</code></td><td>—</td><td>Which series the value comes from</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>flag</code></td><td>—</td><td>conflict = sources disagree; derived = arithmetic from a cited dataset</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>The series count differently (bonuses, roster base); compare within a series, not across.</li><li>The 2026 value is the mean average-per-year of active contracts, not cash paid in a season.</li><li>Nominal dollars. No median series by decade exists in free sources.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://www.newson6.com/story/5e3685bf2f69d76f6209b3b7/average-salaries-in-the-four-major-sports">AP via News On 6 (NFLPA series, 2000)</a></li><li><a href="https://www.expensivity.com/pro-football-salary-inflation/">Expensivity</a></li><li><a href="https://github.com/nflverse/nflverse-data/releases/download/contracts/historical_contracts.parquet">nflverse historical_contracts (Over The Cap data)</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 26 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>average_usd</th><th>series</th><th>note</th><th>flag</th></tr></thead>
+    <tbody><tr><td>1970</td><td>41000</td><td>AP/NFLPA series</td><td></td><td></td></tr><tr><td>1972</td><td>45000</td><td>AP/NFLPA series</td><td></td><td></td></tr><tr><td>1974</td><td>56000</td><td>AP/NFLPA series</td><td></td><td></td></tr><tr><td>1976</td><td>78000</td><td>AP/NFLPA series</td><td></td><td></td></tr><tr><td>1978</td><td>100000</td><td>AP/NFLPA series</td><td></td><td></td></tr><tr><td>1980</td><td>117000</td><td>AP/NFLPA series</td><td></td><td></td></tr><tr><td>1982</td><td>157000</td><td>AP/NFLPA series</td><td></td><td></td></tr><tr><td>1984</td><td>279000</td><td>AP/NFLPA series</td><td>USFL bidding war</td><td></td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_average_salary.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_minimum_salary">
+  <h2>NFL minimum salary over time</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 10 rows &middot; <code>data/nfl_minimum_salary.csv</code> &middot; topic: <a href="nfl.html#nfl-04">NFL history, section 04</a></p>
+  <p>Rookie (and early veteran) minimum salaries from the first labor deals and from the 2020 CBA.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>year</td><td>—</td></tr><tr><td><code>rookie_minimum_usd</code></td><td>US dollars</td><td>—</td></tr><tr><td><code>veteran_minimum_usd</code></td><td>US dollars</td><td>Only for early deals</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>flag</code></td><td>—</td><td>derived = arithmetic from the cited term sheet</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>2020-2026 values are computed from the term sheet&#39;s increases (+$100K, +$50K, then +$45K a year), not read from a published table.</li><li>No values for 1971-2019 were collected.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://en.wikipedia.org/wiki/National_Football_League_Players_Association">Wikipedia: NFLPA</a></li><li><a href="https://www.nfl.com/news/full-term-sheet-of-proposed-collective-bargaining-agreement-0ap3000001102608">NFL.com: 2020 CBA term sheet</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 10 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>rookie_minimum_usd</th><th>veteran_minimum_usd</th><th>note</th><th>flag</th></tr></thead>
+    <tbody><tr><td>1958</td><td></td><td></td><td>$5,000 was the players&#39; goal, not a won minimum</td><td></td></tr><tr><td>1968</td><td>9000</td><td>10000</td><td>First CBA</td><td></td></tr><tr><td>1970</td><td>12500</td><td>13000</td><td></td><td></td></tr><tr><td>2020</td><td>610000</td><td></td><td>Derived from the 2020 CBA term sheet&#39;s step increases</td><td>derived</td></tr><tr><td>2021</td><td>660000</td><td></td><td>Derived from the 2020 CBA term sheet&#39;s step increases</td><td>derived</td></tr><tr><td>2022</td><td>705000</td><td></td><td>Derived from the 2020 CBA term sheet&#39;s step increases</td><td>derived</td></tr><tr><td>2023</td><td>750000</td><td></td><td>Derived from the 2020 CBA term sheet&#39;s step increases</td><td>derived</td></tr><tr><td>2024</td><td>795000</td><td></td><td>Derived from the 2020 CBA term sheet&#39;s step increases</td><td>derived</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_minimum_salary.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_league_revenue">
+  <h2>NFL league revenue over time</h2>
+  <p class="meta"><span class="badge low">low confidence</span> &middot; 8 rows &middot; <code>data/nfl_league_revenue.csv</code> &middot; topic: <a href="nfl.html#nfl-03">NFL history, section 03</a></p>
+  <p>Total league revenue where a figure was found. Most years are missing; several values are estimates or snippets and sit in the note column.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>year</td><td>—</td></tr><tr><td><code>revenue_usd_b</code></td><td>US$ billions</td><td>Only for confirmed figures</td></tr><tr><td><code>measure</code></td><td>—</td><td>What the figure counts</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>flag</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>No free year-by-year revenue series exists (Statista is paywalled; S&amp;P Global was blocked).</li><li>Only 2010 and 2025 have confirmed numbers; do not draw a trend line through them.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://www.sportico.com/feature/how-nfl-teams-owners-make-money-1234795113/">Sportico, 2026: how NFL teams make money</a></li><li><a href="https://en.wikipedia.org/wiki/2011_NFL_lockout">Wikipedia: 2011 NFL lockout</a></li><li><a href="https://www.statista.com/statistics/193457/total-league-revenue-of-the-nfl-since-2005/">Statista (headline only, paywalled)</a></li><li><a href="https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/nfl-sba-report-final.pdf">House Judiciary SBA staff report, June 2026</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 8 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>revenue_usd_b</th><th>measure</th><th>note</th><th>flag</th></tr></thead>
+    <tbody><tr><td>1960</td><td></td><td>TV money only</td><td>$2.577M total TV money across all teams</td><td></td></tr><tr><td>2001</td><td></td><td>League total</td><td>Roughly $7B, inferred from Statista&#39;s &#39;+$17B since 2001&#39; headline</td><td>inferred</td></tr><tr><td>2006</td><td></td><td>League total</td><td>About $6B [unconfirmed: Yale event-page snippet]</td><td>unconfirmed</td></tr><tr><td>2010</td><td>8</td><td>League total</td><td>About $8B; Sportico and Wikipedia agree</td><td></td></tr><tr><td>2020</td><td></td><td>League total</td><td>Dip from COVID (no fans in 2020)</td><td></td></tr><tr><td>2024</td><td></td><td>League total</td><td>Over $23B (+14%) [unconfirmed: S&amp;P Global snippet; page blocked]</td><td>unconfirmed</td></tr><tr><td>2025</td><td>23.5</td><td>Team revenue (all 32 clubs)</td><td>+6%; league total reported as over $24B; 79% above MLB</td><td></td></tr><tr><td>2027</td><td></td><td>Target</td><td>$25B goal Goodell set in 2010</td><td></td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_league_revenue.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_national_revenue_per_team">
+  <h2>NFL national money per team</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 6 rows &middot; <code>data/nfl_national_revenue_per_team.csv</code> &middot; topic: <a href="nfl.html#nfl-02">NFL history, section 02</a></p>
+  <p>Equal per-team payouts from national TV and other national revenue.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>season</code></td><td>year</td><td>—</td></tr><tr><td><code>usd_m</code></td><td>US$ millions</td><td>—</td></tr><tr><td><code>measure</code></td><td>—</td><td>—</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>TV money and total national revenue are different measures; the 2025 value is a lower bound (&#39;more than $450M&#39;).</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/nfl-sba-report-final.pdf">House Judiciary SBA staff report, June 2026</a></li><li><a href="https://en.wikipedia.org/wiki/National_Football_League">Wikipedia: National Football League</a></li><li><a href="https://www.sportico.com/leagues/football/2026/nfl-2025-national-revenue-per-team-1234939659/">Sportico, July 2026: national revenue per team</a></li><li><a href="https://sports.yahoo.com/articles/y-sports-biz-cheese-squeezed-financially-154014025.html">Yahoo Sports: Packers finances, 2026</a></li></ul>
+  <p><strong>Preview</strong> (first 6 of 6 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>season</th><th>usd_m</th><th>measure</th><th>note</th></tr></thead>
+    <tbody><tr><td>1961</td><td>0.31</td><td>Per-team TV money</td><td>About $310K per team under the first pooled CBS deal</td></tr><tr><td>2010</td><td>99.9</td><td>Per-team TV money</td><td></td></tr><tr><td>2019</td><td>255</td><td>Per-team TV money</td><td></td></tr><tr><td>2024</td><td></td><td>Per-team TV money</td><td>$416M-$433M (range)</td></tr><tr><td>2025</td><td>450</td><td>National revenue per team</td><td>Reported as more than $450M; about $14.5B in total (+~5%)</td></tr><tr><td>2025</td><td>453</td><td>Green Bay Packers national revenue, FY2025-26</td><td>Packers revenue $753M (60/40 national/local)</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_national_revenue_per_team.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_media_rights_deals">
+  <h2>National media-rights deals by era</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 19 rows &middot; <code>data/nfl_media_rights_deals.csv</code> &middot; topic: <a href="nfl.html#nfl-02">NFL history, section 02</a></p>
+  <p>League-wide TV and streaming contracts from 1960 to the 2023-33 deals, with values as reported.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>start_year</code></td><td>year</td><td>—</td></tr><tr><td><code>end_year</code></td><td>year</td><td>Blank when open-ended or not stated</td></tr><tr><td><code>deal</code></td><td>—</td><td>—</td></tr><tr><td><code>partners</code></td><td>—</td><td>—</td></tr><tr><td><code>value_as_reported</code></td><td>—</td><td>Value in the source&#39;s words</td></tr><tr><td><code>total_usd_m</code></td><td>US$ millions (nominal)</td><td>Contract total where one is stated</td></tr><tr><td><code>per_year_usd_m</code></td><td>US$ millions a year</td><td>Where only a yearly figure is stated</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Totals mix packages differently by era (some include cable, some do not); 2014-22 total counts broadcast only.</li><li>&#39;About&#39; and &#39;over&#39; figures are kept as stated; nominal dollars.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/nfl-sba-report-final.pdf">House Judiciary SBA staff report, June 2026</a></li><li><a href="https://awfulannouncing.com/2015/nfl-tv-changed-dramatically-over-the-last-50-years.html">Awful Announcing, 2015</a></li><li><a href="https://www.upi.com/Archives/1998/02/11/Aikman-restructures-contracts/4069887173200/">UPI, 1998</a></li><li><a href="https://www.cnbc.com/2021/03/18/nfl-media-rights-deal-2023-2033-amazon-gets-exclusive-thursday-night.html">CNBC, Mar 2021</a></li><li><a href="https://en.wikipedia.org/wiki/NFL_Sunday_Ticket">Wikipedia: NFL Sunday Ticket</a></li><li><a href="https://www.espn.com/espn/story/_/id/47793895/regulators-ok-espn-purchase-nfl-network-redzone-rights-nfl-equity-stake">ESPN: NFL Network deal</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 19 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>start_year</th><th>end_year</th><th>deal</th><th>partners</th><th>value_as_reported</th><th>total_usd_m</th><th>per_year_usd_m</th><th>source</th></tr></thead>
+    <tbody><tr><td>1960</td><td>1960</td><td>Teams sell TV rights separately</td><td>Various</td><td>$2.577M total; best team $445K, worst $117K</td><td>2.577</td><td></td><td>House SBA report</td></tr><tr><td>1961</td><td>1961</td><td>First pooled NFL deal after the SBA</td><td>CBS</td><td>$4.65M a year, about $310K per team</td><td></td><td>4.65</td><td>House SBA report</td></tr><tr><td>1964</td><td>1965</td><td>CBS</td><td>CBS</td><td>$28.2M for 2 years</td><td>28.2</td><td></td><td>Awful Announcing</td></tr><tr><td>1965</td><td>1969</td><td>AFL on NBC</td><td>NBC</td><td>$36M over 5 years (the money that kept the AFL alive)</td><td>36</td><td></td><td>Awful Announcing</td></tr><tr><td>1967</td><td>1967</td><td>Super Bowl I</td><td>CBS, NBC</td><td>$9.5M</td><td>9.5</td><td></td><td>Awful Announcing</td></tr><tr><td>1970</td><td>1973</td><td>CBS, NBC, plus ABC Monday Night Football</td><td>CBS, NBC, ABC</td><td>$156M over 4 years (CBS and NBC); ABC MNF $8M a year</td><td>156</td><td></td><td>Awful Announcing</td></tr><tr><td>1974</td><td>1977</td><td>Renewal</td><td></td><td>$218M over 4 years</td><td>218</td><td></td><td>Awful Announcing</td></tr><tr><td>1978</td><td>1981</td><td>Renewal</td><td></td><td>$646M over 4 years</td><td>646</td><td></td><td>Awful Announcing</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_media_rights_deals.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_franchise_values">
+  <h2>NFL franchise values over time</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 20 rows &middot; <code>data/nfl_franchise_values.csv</code> &middot; topic: <a href="nfl.html#nfl-02">NFL history, section 02</a></p>
+  <p>Average team values (Forbes and Sportico), the top team, Forbes&#39;s 2026 top 10 and record sale prices.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>year</td><td>—</td></tr><tr><td><code>kind</code></td><td>—</td><td>Average value, top team, or sale price</td></tr><tr><td><code>team</code></td><td>—</td><td>—</td></tr><tr><td><code>value_usd_b</code></td><td>US$ billions (nominal)</td><td>—</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Forbes pages were blocked (403); Forbes figures come via Quartz&#39;s write-up.</li><li>Valuations are estimates by publications, not audited figures; Forbes and Sportico differ.</li><li>No average-value series before 2022 was collected.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://qz.com/nfl-most-valuable-team-2026">Quartz: Forbes 2026 NFL valuations</a></li><li><a href="https://en.wikipedia.org/wiki/Forbes_list_of_the_most_valuable_sports_teams">Wikipedia: Forbes list of the most valuable sports teams</a></li><li><a href="https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/nfl-sba-report-final.pdf">House Judiciary SBA staff report, June 2026</a></li><li><a href="https://en.wikipedia.org/wiki/National_Football_League">Wikipedia: National Football League</a></li><li><a href="https://www.sportico.com/feature/how-nfl-teams-owners-make-money-1234795113/">Sportico, 2026: how NFL teams make money</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 20 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>kind</th><th>team</th><th>value_usd_b</th><th>source</th><th>note</th></tr></thead>
+    <tbody><tr><td>1961</td><td>Sale price</td><td>Browns</td><td>0.004</td><td>House SBA report</td><td>Bought for $4M</td></tr><tr><td>2016</td><td>Top team</td><td>Cowboys</td><td></td><td>Wikipedia: Forbes list</td><td>First sports team above $4B</td></tr><tr><td>2022</td><td>Average team value (Forbes)</td><td></td><td>4.5</td><td>Quartz</td><td>Cowboys top team</td></tr><tr><td>2023</td><td>Sale price</td><td>Commanders</td><td>6.05</td><td>House SBA report</td><td>Then a record</td></tr><tr><td>2025</td><td>Average team value (Forbes)</td><td></td><td>7.1</td><td>Quartz</td><td></td></tr><tr><td>2025</td><td>Average team value (Sportico)</td><td></td><td>7.13</td><td>Wikipedia: NFL</td><td></td></tr><tr><td>2025</td><td>Top team (Sportico)</td><td>Cowboys</td><td>12.8</td><td>Wikipedia: NFL</td><td></td></tr><tr><td>2026</td><td>Average team value (Forbes)</td><td></td><td>9.5</td><td>Quartz</td><td>+34%; all 32 at least $8B; 10 above $10B; total over $300B; 13.4x revenue (8.3x in 2022)</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_franchise_values.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_league_size">
+  <h2>NFL league size over time</h2>
+  <p class="meta"><span class="badge high">high confidence</span> &middot; 6 rows &middot; <code>data/nfl_league_size.csv</code> &middot; topic: <a href="nfl.html#nfl-01">NFL history, section 01</a></p>
+  <p>Number of teams at each expansion step since 1960.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>year</td><td>—</td></tr><tr><td><code>nfl_teams</code></td><td>teams</td><td>—</td></tr><tr><td><code>afl_teams</code></td><td>teams</td><td>Rival AFL, 1960 only</td></tr><tr><td><code>change</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Only the steps in the research table; intermediate years (for example 1961, 1966-68 additions) are not listed as rows.</li><li>Wikipedia&#39;s &#39;Expansion of the NFL&#39; page does not exist, so years come from the team table on the main NFL article.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://en.wikipedia.org/wiki/National_Football_League">Wikipedia: National Football League</a></li></ul>
+  <p><strong>Preview</strong> (first 6 of 6 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>nfl_teams</th><th>afl_teams</th><th>change</th></tr></thead>
+    <tbody><tr><td>1960</td><td>13</td><td>8</td><td>AFL begins; Cowboys</td></tr><tr><td>1970</td><td>26</td><td></td><td>Merger complete (AFC and NFC)</td></tr><tr><td>1976</td><td>28</td><td></td><td>Seahawks, Buccaneers</td></tr><tr><td>1995</td><td>30</td><td></td><td>Panthers, Jaguars</td></tr><tr><td>1999</td><td>31</td><td></td><td>Browns restored</td></tr><tr><td>2002</td><td>32</td><td></td><td>Texans</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_league_size.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_international_games">
+  <h2>NFL regular-season games outside the US, 2005-2026</h2>
+  <p class="meta"><span class="badge high">high confidence</span> &middot; 65 rows &middot; <code>data/nfl_international_games.csv</code> &middot; topic: <a href="nfl.html#nfl-09">NFL history, section 09</a></p>
+  <p>Every regular-season game played abroad, with city, venue (where the research gives it), teams and attendance.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>season</td><td>—</td></tr><tr><td><code>date</code></td><td>YYYY-MM-DD</td><td>Only where the research gives it</td></tr><tr><td><code>city</code></td><td>—</td><td>—</td></tr><tr><td><code>country</code></td><td>—</td><td>—</td></tr><tr><td><code>venue</code></td><td>—</td><td>Blank where a row lists several venues without saying which game was where</td></tr><tr><td><code>teams</code></td><td>—</td><td>As listed in the source table</td></tr><tr><td><code>attendance</code></td><td>people</td><td>Announced attendance</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Attendance is set mostly by stadium capacity: international games sell out.</li><li>Venues per game are missing for some London, Mexico City and Germany rows; the source table grouped them.</li><li>Three 2026 games (Madrid, Munich, Mexico City) were still to be played on the compile date.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://en.wikipedia.org/wiki/NFL_International_Series">Wikipedia: NFL International Series</a></li><li><a href="https://en.wikipedia.org/wiki/American_Bowl">Wikipedia: American Bowl</a></li><li><a href="https://www.espn.com/nfl/news/story?id=2920738">ESPN, 2007</a></li><li><a href="https://media.nfl.com/news-and-releases/international/nfl-unveils-2026-international-games-schedule">NFL media release: 2026 international games</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 65 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>date</th><th>city</th><th>country</th><th>venue</th><th>teams</th><th>attendance</th><th>note</th></tr></thead>
+    <tbody><tr><td>2005</td><td>2005-10-02</td><td>Mexico City</td><td>Mexico</td><td>Estadio Azteca</td><td>49ers–Cardinals</td><td>103467</td><td>First regular-season game outside the US</td></tr><tr><td>2007</td><td>2007-10-28</td><td>London</td><td>UK</td><td>Wembley</td><td>Giants–Dolphins</td><td>81176</td><td></td></tr><tr><td>2008</td><td></td><td>London</td><td>UK</td><td>Wembley</td><td>Chargers–Saints</td><td>83226</td><td></td></tr><tr><td>2009</td><td></td><td>London</td><td>UK</td><td>Wembley</td><td>Patriots–Buccaneers</td><td>84254</td><td></td></tr><tr><td>2010</td><td></td><td>London</td><td>UK</td><td>Wembley</td><td>Broncos–49ers</td><td>83941</td><td></td></tr><tr><td>2011</td><td></td><td>London</td><td>UK</td><td>Wembley</td><td>Bears–Buccaneers</td><td>76981</td><td></td></tr><tr><td>2012</td><td></td><td>London</td><td>UK</td><td>Wembley</td><td>Patriots–Rams</td><td>84004</td><td></td></tr><tr><td>2013</td><td></td><td>London</td><td>UK</td><td>Wembley</td><td>Steelers–Vikings</td><td>83518</td><td></td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_international_games.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_games_in_japan">
+  <h2>NFL games in Japan, 1976-2005</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 14 rows &middot; <code>data/nfl_games_in_japan.csv</code> &middot; topic: <a href="japan.html#japan-08">Football in Japan, section 08</a></p>
+  <p>The 1976 Korakuen game and the 13 preseason American Bowls in Japan (1989-2005): 14 games in all.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>date</code></td><td>YYYY-MM-DD</td><td>Local date</td></tr><tr><td><code>year</code></td><td>year</td><td>—</td></tr><tr><td><code>result</code></td><td>—</td><td>Winner first</td></tr><tr><td><code>venue</code></td><td>—</td><td>—</td></tr><tr><td><code>city</code></td><td>—</td><td>—</td></tr><tr><td><code>attendance</code></td><td>people</td><td>Only where one figure is reported</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Crowds were found for only one game (1976); 1989 has two conflicting figures; 1990-2005 crowds were not found.</li><li>All are exhibition (preseason) games; no regular-season game has been played in Asia.</li><li>Tokyo Dome holds about 45,000-55,000 for football [?], so sold-out games would be in that range; not used as data.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://americanfootball.jp/top_news/276/">JAFA year page 1976</a></li><li><a href="https://www.nfl.com/news/adventures-abroad-remembering-nfl-s-1976-foray-into-japan-0ap3000000739785">NFL.com: the 1976 Tokyo game</a></li><li><a href="https://www.upi.com/Archives/1990/08/02/Seahawks-Broncos-play-American-Bowl-Sunday-in-Japan/2964649569600/">UPI, 1990-08-02</a></li><li><a href="https://en.wikipedia.org/wiki/American_Bowl">Wikipedia: American Bowl</a></li><li><a href="https://americanfootball.jp/top_news/292/">JAFA year page 1992</a></li><li><a href="https://americanfootball.jp/top_news/296/">JAFA year page 1996</a></li><li><a href="https://americanfootball.jp/top_news/302/">JAFA year page 2002</a></li><li><a href="https://nflers.neocities.org/nflamericanbowl">nflers.neocities.org: American Bowl sites</a></li><li><a href="https://www.jiji.com/jc/article?k=2026102900747&amp;g=spo">Jiji, 2026-10-30</a></li><li><a href="https://www.japantimes.co.jp/sports/2015/02/04/more-sports/football/football-diehards-yearn-nfls-return-japan/">Japan Times, 2015</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 14 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>date</th><th>year</th><th>result</th><th>venue</th><th>city</th><th>attendance</th><th>note</th><th>source</th></tr></thead>
+    <tbody><tr><td>1976-08-16</td><td>1976</td><td>Cardinals 20, Chargers 10 (Mainichi Star Bowl)</td><td>Korakuen Stadium</td><td>Tokyo</td><td>38000</td><td>Light rain (JAFA). NFL.com and Yahoo Sports put the crowd at about 38,000-40,000. First NFL game outside North America.</td><td>JAFA year page 1976; NFL.com</td></tr><tr><td>1989-08-06</td><td>1989</td><td>Rams 16, 49ers 13 (OT)</td><td>Tokyo Dome</td><td>Tokyo</td><td></td><td>43,000 sold out (Washington Post, search result) vs more than 45,000 (UPI) [conflict]</td><td>Washington Post (search result); UPI 1990-08-02</td></tr><tr><td>1990-08-05</td><td>1990</td><td>Broncos 10, Seahawks 7</td><td>Tokyo Dome</td><td>Tokyo</td><td></td><td>Attendance not found</td><td>JAFA 1990 page; en.wikipedia American Bowl</td></tr><tr><td>1991-08-04</td><td>1991</td><td>Dolphins 19, Raiders 17</td><td>Tokyo Dome</td><td>Tokyo</td><td></td><td>Attendance not found</td><td>JAFA; en.wikipedia</td></tr><tr><td>1992-08-02</td><td>1992</td><td>Oilers 34, Cowboys 23</td><td>Tokyo Dome</td><td>Tokyo</td><td></td><td>Attendance not found. JAFA lists Oilers vs Cowboys; the score was read from the layout of English Wikipedia&#39;s table, though the Japan research found the game missing from that list [conflict]</td><td>JAFA 1992 page; en.wikipedia American Bowl</td></tr><tr><td>1993-08-01</td><td>1993</td><td>Saints 28, Eagles 16</td><td>Tokyo Dome</td><td>Tokyo</td><td></td><td>Attendance not found</td><td>JAFA; en.wikipedia</td></tr><tr><td>1994-08-07</td><td>1994</td><td>Vikings 17, Chiefs 9</td><td>Tokyo Dome</td><td>Tokyo</td><td></td><td>Attendance not found</td><td>en.wikipedia</td></tr><tr><td>1995-08-06</td><td>1995</td><td>Broncos 24, 49ers 10</td><td>Tokyo Dome</td><td>Tokyo</td><td></td><td>Attendance not found</td><td>en.wikipedia</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_games_in_japan.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_cte_brain_bank">
+  <h2>CTE in donated brains of former NFL players (Boston University)</h2>
+  <p class="meta"><span class="badge high">high confidence</span> &middot; 3 rows &middot; <code>data/nfl_cte_brain_bank.csv</code> &middot; topic: <a href="nfl.html#nfl-06">NFL history, section 06</a></p>
+  <p>Share of former NFL players&#39; donated brains diagnosed with CTE in three published studies.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year_published</code></td><td>year</td><td>—</td></tr><tr><td><code>journal</code></td><td>—</td><td>—</td></tr><tr><td><code>cte_cases</code></td><td>brains</td><td>Diagnosed with CTE</td></tr><tr><td><code>brains_studied</code></td><td>brains</td><td>—</td></tr><tr><td><code>share_pct</code></td><td>%</td><td>As published</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Donated brains, often from families who already suspected disease: these shares do not measure how common CTE is among all players.</li><li>CTE can only be diagnosed after death.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://en.wikipedia.org/wiki/Concussions_in_American_football">Wikipedia: Concussions in American football</a></li></ul>
+  <p><strong>Preview</strong> (first 3 of 3 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year_published</th><th>journal</th><th>cte_cases</th><th>brains_studied</th><th>share_pct</th></tr></thead>
+    <tbody><tr><td>2014</td><td></td><td>76</td><td>79</td><td>96</td></tr><tr><td>2017</td><td>JAMA</td><td>110</td><td>111</td><td>99</td></tr><tr><td>2026</td><td>BMJ</td><td>315</td><td>338</td><td>93.2</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_cte_brain_bank.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_concussion_measures">
+  <h2>NFL concussion settlement and safety figures</h2>
+  <p class="meta"><span class="badge high">high confidence</span> &middot; 10 rows &middot; <code>data/nfl_concussion_measures.csv</code> &middot; topic: <a href="nfl.html#nfl-06">NFL history, section 06</a></p>
+  <p>Concussion settlement totals (as of Nov 2, 2026) and recent safety measures.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>measure</code></td><td>—</td><td>—</td></tr><tr><td><code>as_of</code></td><td>date or season</td><td>—</td></tr><tr><td><code>value</code></td><td>—</td><td>—</td></tr><tr><td><code>unit</code></td><td>—</td><td>—</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>The 2025 season&#39;s total concussion count was not found in the pages opened.</li><li>Settlement figures change over time; these are a snapshot.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://www.nflconcussionsettlement.com/Reports_Statistics.aspx">NFL Concussion Settlement official site</a></li><li><a href="https://www.espn.com/nfl/story/_/id/31554110/nfl-halt-race-norming-review-black-claims-1-billion-concussion-settlement">ESPN, 2021 (race-norming)</a></li><li><a href="https://en.wikipedia.org/wiki/Concussions_in_American_football">Wikipedia: Concussions in American football</a></li><li><a href="https://www.nfl.com/playerhealthandsafety/health-and-wellness/injury-data/2025-season-key-takeaways">NFL.com: 2025 injury data</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/40746051/">PubMed 40746051 (Am J Sports Med 2025)</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 10 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>measure</th><th>as_of</th><th>value</th><th>unit</th><th>note</th><th>source</th></tr></thead>
+    <tbody><tr><td>Retired players registered</td><td>2026-11-02</td><td>20564</td><td>players</td><td></td><td>NFL Concussion Settlement site</td></tr><tr><td>Claim packages submitted</td><td>2026-11-02</td><td>4663</td><td>claims</td><td></td><td>NFL Concussion Settlement site</td></tr><tr><td>Claims found payable</td><td>2026-11-02</td><td>2228</td><td>claims</td><td></td><td>NFL Concussion Settlement site</td></tr><tr><td>Total awarded</td><td>2026-11-02</td><td>1738767412</td><td>US dollars</td><td></td><td>NFL Concussion Settlement site</td></tr><tr><td>Baseline Assessment Program appointments attended</td><td>2026-11-02</td><td>17542</td><td>appointments</td><td></td><td>NFL Concussion Settlement site</td></tr><tr><td>Payouts to date</td><td>2021-06</td><td></td><td>US dollars</td><td>About $800M by June 2021</td><td>ESPN 2021</td></tr><tr><td>Settlement announced</td><td>2013-08-29</td><td>765000000</td><td>US dollars</td><td>Covering more than 18,000 retirees; cap later removed</td><td>Wikipedia: Concussions in American football</td></tr><tr><td>In-game concussion evaluations</td><td>2025 season</td><td>538</td><td>evaluations</td><td>Record</td><td>NFL 2025 injury data</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_concussion_measures.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="japan_registered_players">
+  <h2>Japan registered American football players over time</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 10 rows &middot; <code>data/japan_registered_players.csv</code> &middot; topic: <a href="japan.html#japan-07">Football in Japan, section 07</a></p>
+  <p>Teams and registered players from JAFA&#39;s history pages and from JAFA&#39;s answers to the Sasakawa Sports Foundation (SSF) survey of national federations.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>year</td><td>Calendar or fiscal year</td></tr><tr><td><code>year_label</code></td><td>—</td><td>As written in the source</td></tr><tr><td><code>teams</code></td><td>teams</td><td>—</td></tr><tr><td><code>players</code></td><td>players</td><td>Only for values confirmed in an opened source</td></tr><tr><td><code>series</code></td><td>—</td><td>Which count the row comes from</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>flag</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Two counting methods (JAFA&#39;s own history pages and the SSF survey) are mixed; read it as a trend, not exact year-on-year change.</li><li>Years between the rows are missing, not zero.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://americanfootball.jp/top_news/234/">JAFA year page 1934</a></li><li><a href="https://americanfootball.jp/top_news/292/">JAFA year page 1992</a></li><li><a href="https://www.japan-sports.or.jp/Portals/0/data/kikaku/R2Population_report.pdf">JSPO sport-population report 2020</a></li><li><a href="https://americanfootball.jp/top_news/296/">JAFA year page 1996</a></li><li><a href="https://americanfootball.jp/top_news/300/">JAFA year page 2000</a></li><li><a href="https://americanfootball.jp/top_news/310/">JAFA year page 2010</a></li><li><a href="https://www.flagfootballglobal.com/ja/articles/japan-american-football-registered-players-and-flag-football">Flag Football Global (citing SSF and others)</a></li><li><a href="https://www.ssf.or.jp/files/NF2024cp_03.pdf">SSF Survey of National Federations 2024, table 3</a></li><li><a href="https://americanfootball.jp/wp-content/uploads/164_01.pdf">JAFA flag registration notice</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 10 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>year_label</th><th>teams</th><th>players</th><th>series</th><th>note</th><th>flag</th></tr></thead>
+    <tbody><tr><td>1934</td><td>1934</td><td>3</td><td>66</td><td>JAFA history page</td><td>Tokyo student federation</td><td></td></tr><tr><td>1992</td><td>1992</td><td>424</td><td>20683</td><td>JAFA history page</td><td>Peak</td><td></td></tr><tr><td>1995</td><td>FY1995</td><td></td><td></td><td>JSPO report</td><td>26,500 members: counts all JAFA members, not only players</td><td>conflict</td></tr><tr><td>1996</td><td>1996</td><td>454</td><td>16682</td><td>JAFA history page</td><td>-10.8% on the year</td><td></td></tr><tr><td>2000</td><td>2000</td><td>422</td><td>15649</td><td>JAFA history page</td><td></td><td></td></tr><tr><td>2010</td><td>2010 / FY2010</td><td>391</td><td>19552</td><td>JAFA 2010 page (teams); SSF FY2010 (players)</td><td></td><td></td></tr><tr><td>2020</td><td>FY2020</td><td></td><td></td><td>SSF via Flag Football Global</td><td>15,756 [?]: only from Flag Football Global&#39;s summary of SSF data</td><td>unconfirmed</td></tr><tr><td>2022</td><td>FY2022</td><td></td><td></td><td>SSF via Flag Football Global</td><td>13,809 [?]: only from Flag Football Global&#39;s summary of SSF data</td><td>unconfirmed</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/japan_registered_players.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="japan_players_by_level">
+  <h2>Japan registered players by level</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 10 rows &middot; <code>data/japan_players_by_level.csv</code> &middot; topic: <a href="japan.html#japan-07">Football in Japan, section 07</a></p>
+  <p>Breakdowns by school or adult level where JAFA&#39;s history pages give them.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>year</td><td>—</td></tr><tr><td><code>level</code></td><td>—</td><td>—</td></tr><tr><td><code>teams</code></td><td>teams</td><td>—</td></tr><tr><td><code>players</code></td><td>players</td><td>—</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>No yearly breakdown by level after 2010 was found.</li><li>The 2022 figure is approximate (Nikkei&#39;s first paragraph).</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://americanfootball.jp/top_news/292/">JAFA year page 1992</a></li><li><a href="https://americanfootball.jp/top_news/300/">JAFA year page 2000</a></li><li><a href="https://americanfootball.jp/top_news/307/">JAFA year page 2007</a></li><li><a href="https://www.nikkei.com/article/DGXZQODH212CN0R20C22A7000000/">Nikkei 2022-07-26 (paywalled; first paragraph)</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 10 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>level</th><th>teams</th><th>players</th><th>note</th><th>source</th></tr></thead>
+    <tbody><tr><td>1992</td><td>Junior high</td><td>4</td><td>173</td><td></td><td>JAFA 1992 page</td></tr><tr><td>1992</td><td>High school</td><td>119</td><td>5120</td><td></td><td>JAFA 1992 page</td></tr><tr><td>1992</td><td>College</td><td>221</td><td>11628</td><td></td><td>JAFA 1992 page</td></tr><tr><td>1992</td><td>Corporate</td><td>80</td><td>3762</td><td></td><td>JAFA 1992 page</td></tr><tr><td>2000</td><td>High school</td><td></td><td>2698</td><td></td><td>JAFA 2000 page</td></tr><tr><td>2000</td><td>College</td><td></td><td>9331</td><td></td><td>JAFA 2000 page</td></tr><tr><td>2000</td><td>Corporate</td><td></td><td>3620</td><td></td><td>JAFA 2000 page</td></tr><tr><td>2001</td><td>High school</td><td></td><td>2280</td><td>High-school low point</td><td>JAFA 2007 page</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/japan_players_by_level.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="japan_big_game_attendance">
+  <h2>Japan big-game attendance: single games</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 41 rows &middot; <code>data/japan_big_game_attendance.csv</code> &middot; topic: <a href="japan.html#japan-08">Football in Japan, section 08</a></p>
+  <p>Announced crowds for named games: the Rice Bowl, Koshien Bowl, corporate finals, US-college all-star games and the X League.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>year</td><td>Year the game was played (Rice Bowl: January)</td></tr><tr><td><code>event</code></td><td>—</td><td>—</td></tr><tr><td><code>venue</code></td><td>—</td><td>—</td></tr><tr><td><code>attendance</code></td><td>people</td><td>Only for single, unmarked figures</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Announced crowds, mostly rounded.</li><li>Only the years the research names individually; see the era table for the typical ranges.</li><li>The two JAFA sources disagree on the January 2025 Rice Bowl (17,694 vs 17,885).</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://americanfootball.jp/top_news/181/">JAFA domestic results tables</a></li><li><a href="https://americanfootball.jp/english/">JAFA English page</a></li><li><a href="https://www.fisu.net/2018/06/17/a-brief-history-of-american-football-in-japan/">FISU, 2018</a></li><li><a href="https://americanfootball.jp/top_news/238/">JAFA year page 1938</a></li><li><a href="https://americanfootball.jp/top_news/247/">JAFA year page 1947</a></li><li><a href="http://www.luckyshow.org/football/Rice%20Bowl%20%28Service%20Teams%29.htm">luckyshow.org: US service bowls</a></li><li><a href="https://americanfootball.jp/top_news/278/">JAFA year page 1978</a></li><li><a href="https://americanfootball.jp/top_news/283/">JAFA year page 1983</a></li><li><a href="https://americanfootball.jp/top_news/291/">JAFA year page 1991</a></li><li><a href="https://americanfootball.jp/top_news/292/">JAFA year page 1992</a></li><li><a href="https://www.amefootojisan.com/kankyaku-xlg-24wk1-3/">amefootojisan.com fan blog (X League 2024)</a></li><li><a href="https://americanfootball.jp/wp-content/uploads/2025年度_事業報告書.pdf">JAFA FY2025 business report</a></li><li><a href="https://www.nikkei.com/article/DGXZQODH048MK0U5A800C2000000/">Nikkei (licence article; summary line)</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 41 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>event</th><th>venue</th><th>attendance</th><th>note</th><th>source</th></tr></thead>
+    <tbody><tr><td>1934</td><td>First official game</td><td>Meiji Jingu Gaien Stadium</td><td></td><td>15,000 (JAFA English page) vs about 20,000 (JAFA 50-year history, FISU) [conflict]</td><td>JAFA; FISU</td></tr><tr><td>1938</td><td>East-West student all-stars</td><td></td><td>25000</td><td>About 25,000</td><td>JAFA 1938 page</td></tr><tr><td>1947</td><td>Koshien Bowl</td><td>Koshien Stadium</td><td>700</td><td>First Koshien Bowl</td><td>JAFA 1947 page</td></tr><tr><td>1955</td><td>Rice Bowl</td><td></td><td>40000</td><td></td><td>JAFA results</td></tr><tr><td>1958</td><td>US service all-star Rice Bowl</td><td>National Stadium</td><td></td><td>78,000 [?] single fan-run source</td><td>luckyshow.org</td></tr><tr><td>1959</td><td>Rice Bowl</td><td>National Stadium</td><td>3000</td><td>Low</td><td>JAFA results</td></tr><tr><td>1974</td><td>Rice Bowl</td><td>National Stadium</td><td>30000</td><td></td><td>JAFA results</td></tr><tr><td>1979</td><td>Japan Bowl (US college all-stars)</td><td>National Stadium</td><td>55000</td><td>With Joe Montana</td><td>JAFA 1978 page</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/japan_big_game_attendance.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="japan_bowl_attendance_by_era">
+  <h2>Japan bowl attendance by era</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 21 rows &middot; <code>data/japan_bowl_attendance_by_era.csv</code> &middot; topic: <a href="japan.html#japan-08">Football in Japan, section 08</a></p>
+  <p>Typical crowd ranges by era for the Rice Bowl, the Koshien Bowl and the corporate final.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>event</code></td><td>—</td><td>—</td></tr><tr><td><code>era_start</code></td><td>year</td><td>—</td></tr><tr><td><code>era_end</code></td><td>year</td><td>—</td></tr><tr><td><code>format</code></td><td>—</td><td>—</td></tr><tr><td><code>venue</code></td><td>—</td><td>—</td></tr><tr><td><code>typical_low</code></td><td>people</td><td>Low end of the typical range</td></tr><tr><td><code>typical_high</code></td><td>people</td><td>High end of the typical range</td></tr><tr><td><code>highs_and_lows</code></td><td>—</td><td>Named years</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Ranges summarise JAFA&#39;s yearly results tables; individual years can fall outside them (for example 40,000 in 1955).</li><li>Announced crowds, mostly rounded.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://americanfootball.jp/top_news/181/">JAFA domestic results tables</a></li><li><a href="https://americanfootball.jp/top_news/291/">JAFA year page 1991</a></li><li><a href="https://americanfootball.jp/top_news/292/">JAFA year page 1992</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 21 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>event</th><th>era_start</th><th>era_end</th><th>format</th><th>venue</th><th>typical_low</th><th>typical_high</th><th>highs_and_lows</th></tr></thead>
+    <tbody><tr><td>Rice Bowl</td><td>1948</td><td>1958</td><td>East-West college all-stars</td><td>Nile Kinnick / Jingu, Korakuen</td><td>5000</td><td>15000</td><td>40,000 in 1955</td></tr><tr><td>Rice Bowl</td><td>1959</td><td>1983</td><td>East-West college all-stars</td><td>Mostly National Stadium</td><td>7000</td><td>30000</td><td>3,000 (1959); 30,000 (1974)</td></tr><tr><td>Rice Bowl</td><td>1984</td><td>1991</td><td>College champion vs corporate champion</td><td>National Stadium</td><td>28000</td><td>52000</td><td>48,000 (1988), 52,000 (1991)</td></tr><tr><td>Rice Bowl</td><td>1992</td><td>2001</td><td>College champion vs corporate champion</td><td>Tokyo Dome</td><td>30000</td><td>56000</td><td>56,000 (1992, record); 54,000 (1993, 1995)</td></tr><tr><td>Rice Bowl</td><td>2002</td><td>2020</td><td>College champion vs corporate champion</td><td>Tokyo Dome</td><td>25000</td><td>36000</td><td>35,750 (2011); 25,059 (2012)</td></tr><tr><td>Rice Bowl</td><td>2021</td><td>2021</td><td>College champion vs corporate champion (COVID limits)</td><td>Tokyo Dome</td><td>8851</td><td>8851</td><td></td></tr><tr><td>Rice Bowl</td><td>2022</td><td>2026</td><td>Corporate vs corporate</td><td>Tokyo Dome</td><td>14610</td><td>20214</td><td>14,610 (2022); 20,214 (2026)</td></tr><tr><td>Koshien Bowl</td><td>1947</td><td>1963</td><td>College final</td><td>Koshien Stadium</td><td>700</td><td>5000</td><td>Many years not recorded; 700 (1947)</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/japan_bowl_attendance_by_era.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="jafa_revenue_fy2025">
+  <h2>JAFA income and spending, FY2025 (April 2025 - March 2026)</h2>
+  <p class="meta"><span class="badge high">high confidence</span> &middot; 13 rows &middot; <code>data/jafa_revenue_fy2025.csv</code> &middot; topic: <a href="japan.html#japan-02">Football in Japan, section 02</a></p>
+  <p>The national federation&#39;s revenue lines from its FY2025 accounts.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>line</code></td><td>—</td><td>—</td></tr><tr><td><code>parent</code></td><td>—</td><td>Line this item belongs to</td></tr><tr><td><code>amount_jpy_m</code></td><td>¥ millions</td><td>—</td></tr><tr><td><code>share_of_revenue_pct</code></td><td>%</td><td>Share of total revenue (research arithmetic from the accounts)</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Sub-lines do not add up to their parents; the rest is &#39;other&#39; lines not itemised in the research.</li><li>Shares were computed from the accounts, not published by JAFA.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://americanfootball.jp/wp-content/uploads/JAFA決算書_2025.4.1-2026.3.31.pdf">JAFA FY2025 accounts</a></li><li><a href="https://americanfootball.jp/wp-content/uploads/2025年度_事業報告書.pdf">JAFA FY2025 business report</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 13 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>line</th><th>parent</th><th>amount_jpy_m</th><th>share_of_revenue_pct</th></tr></thead>
+    <tbody><tr><td>Total revenue</td><td></td><td>298.6</td><td></td></tr><tr><td>Total expenses</td><td></td><td>307.9</td><td></td></tr><tr><td>Deficit</td><td></td><td>9.25</td><td></td></tr><tr><td>Subsidies and grants</td><td>Total revenue</td><td>106.5</td><td>36</td></tr><tr><td>Japan Sport Council (JSC)</td><td>Subsidies and grants</td><td>42.8</td><td></td></tr><tr><td>JOC</td><td>Subsidies and grants</td><td>53.4</td><td></td></tr><tr><td>National government</td><td>Subsidies and grants</td><td>6.3</td><td></td></tr><tr><td>Business revenue</td><td>Total revenue</td><td>155.6</td><td></td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/jafa_revenue_fy2025.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="japan_sport_participation">
+  <h2>Japan registered players by sport, FY2024</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 7 rows &middot; <code>data/japan_sport_participation.csv</code> &middot; topic: <a href="japan.html#japan-07">Football in Japan, section 07</a></p>
+  <p>American football&#39;s registered players next to other team sports in Japan.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>sport</code></td><td>—</td><td>—</td></tr><tr><td><code>governing_body</code></td><td>—</td><td>—</td></tr><tr><td><code>registered_players</code></td><td>players</td><td>—</td></tr><tr><td><code>multiple_of_football</code></td><td>x</td><td>About how many times football&#39;s count (research arithmetic)</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Federations count registration differently; multiples are approximate.</li><li>Some rows come from Flag Football Global&#39;s summary rather than the SSF table itself.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://www.ssf.or.jp/files/NF2024cp_03.pdf">SSF Survey of National Federations 2024, table 3</a></li><li><a href="https://www.flagfootballglobal.com/ja/articles/japan-american-football-registered-players-and-flag-football">Flag Football Global (citing SSF and others)</a></li></ul>
+  <p><strong>Preview</strong> (first 7 of 7 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>sport</th><th>governing_body</th><th>registered_players</th><th>multiple_of_football</th><th>note</th><th>source</th></tr></thead>
+    <tbody><tr><td>Soccer</td><td>JFA</td><td>868550</td><td>63</td><td>838,657 by JFA&#39;s own count</td><td>SSF 2024; Flag Football Global</td></tr><tr><td>Soft-ball baseball (軟式野球)</td><td></td><td>580741</td><td>43</td><td></td><td>SSF 2024</td></tr><tr><td>Basketball (excl. 3x3)</td><td>JBA</td><td>580326</td><td>43</td><td></td><td>Flag Football Global, citing JBA</td></tr><tr><td>Rugby</td><td>JRFU</td><td>90240</td><td>7</td><td></td><td>SSF 2024</td></tr><tr><td>Handball</td><td></td><td>74562</td><td>5.6</td><td></td><td>Flag Football Global, citing SSF</td></tr><tr><td>American football</td><td>JAFA</td><td>13387</td><td>1</td><td>Tackle and flag combined</td><td>SSF 2024</td></tr><tr><td>US high-school boys&#39; tackle football (2024-25), for comparison</td><td>NFHS</td><td>1029588</td><td></td><td>US figure</td><td>Flag Football Global, citing NCAA/NFHS data</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/japan_sport_participation.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="japanese_players_north_america">
+  <h2>Japanese players in North American football and the NFL&#39;s pathways</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 9 rows &middot; <code>data/japanese_players_north_america.csv</code> &middot; topic: <a href="japan.html#japan-06">Football in Japan, section 06</a></p>
+  <p>Japanese players who reached the CFL, NFL camps, practice squads, the NFL&#39;s development leagues or a top US college.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>player</code></td><td>—</td><td>Family name first for players usually known that way</td></tr><tr><td><code>position</code></td><td>—</td><td>—</td></tr><tr><td><code>path</code></td><td>—</td><td>—</td></tr><tr><td><code>year</code></td><td>year</td><td>Key year</td></tr><tr><td><code>milestone</code></td><td>—</td><td>—</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Not a complete list: US college walk-ons and other camp invitees were not researched.</li><li>Sources disagree on who was the first Japanese player in an NFL game (1996 trio vs Kawaguchi, 2002).</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://en.wikipedia.org/wiki/Taku_Lee">Wikipedia: Taku Lee</a></li><li><a href="https://en.wikipedia.org/wiki/Kansei_Matsuzawa">Wikipedia: Kansei Matsuzawa</a></li><li><a href="https://nfljapan.com/headlines/117785">NFL Japan, 2025-12-15 (IPP)</a></li><li><a href="https://americanfootball.jp/top_news/296/">JAFA year page 1996</a></li><li><a href="https://ja.wikipedia.org/wiki/河口正史">ja.wikipedia 河口正史</a></li><li><a href="https://ja.wikipedia.org/wiki/山田晋三">ja.wikipedia 山田晋三</a></li><li><a href="https://ja.wikipedia.org/wiki/木下典明">ja.wikipedia 木下典明</a></li><li><a href="https://ja.wikipedia.org/wiki/李卓">ja.wikipedia 李卓</a></li><li><a href="https://www.sportingnews.com/jp/tsn/news/2026-10-21-japanese-players-us-college-football/f913ee5293cadc4589c9ae67">Sporting News Japan, Oct 2026</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 9 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>player</th><th>position</th><th>path</th><th>year</th><th>milestone</th><th>source</th></tr></thead>
+    <tbody><tr><td>Les Maruo</td><td></td><td>CFL (Winnipeg Blue Bombers)</td><td></td><td>First Japanese player in the CFL</td><td>Wikipedia: Taku Lee; ja.wikipedia 李卓</td></tr><tr><td>Takeru Yamasaki</td><td></td><td>CFL (BC Lions)</td><td></td><td>Second Japanese CFL player</td><td>Wikipedia: Taku Lee</td></tr><tr><td>Abe Takuro, Ikenoue Takahiro, Ito Shigemasa</td><td></td><td>World League (later NFL Europe); 1996 Tokyo American Bowl</td><td>1996</td><td>First Japanese players in the World League; JAFA calls them the first Japanese players in an NFL game [conflict]</td><td>JAFA 1996 page</td></tr><tr><td>Kawaguchi Masafumi</td><td>LB</td><td>NFL Europe (Amsterdam, 7 seasons); Packers, Cowboys and 49ers camps</td><td>2002</td><td>Played special teams for the 49ers in the 2002 Osaka preseason game; Wikipedia calls him the first Japanese player in an NFL preseason game [conflict]</td><td>ja.wikipedia 河口正史</td></tr><tr><td>Yamada Shinzo</td><td>LB</td><td>XFL, NFL Europe, Arena league; Buccaneers camp</td><td></td><td></td><td>ja.wikipedia 山田晋三</td></tr><tr><td>Kinoshita Noriaki</td><td>WR</td><td>Atlanta Falcons</td><td>2007-2008</td><td>Rookie free agent 2007; practice squad 2008 under the international program</td><td>ja.wikipedia 木下典明</td></tr><tr><td>Taku Lee</td><td>RB</td><td>Keio, Obic, NFL IPP camp (2021), CFL Montreal (3rd round, 2021), back to Obic 2022</td><td>2021</td><td>Third Japanese CFL player</td><td>Wikipedia: Taku Lee</td></tr><tr><td>Kansei Matsuzawa</td><td>K</td><td>Hocking College, Hawaii; IPP class of 2026; Raiders practice squad</td><td>2026</td><td>Consensus All-American 2025; Raiders practice squad as of Aug 31, 2026; also drafted by CFL Saskatchewan</td><td>Wikipedia: Kansei Matsuzawa; NFL Japan 2025-12-15</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/japanese_players_north_america.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="japan_serious_accidents">
+  <h2>Japan serious football accidents</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 14 rows &middot; <code>data/japan_serious_accidents.csv</code> &middot; topic: <a href="japan.html#japan-05">Football in Japan, section 05</a></p>
+  <p>Deaths, serious head injuries and other serious accidents from JAFA data and Japanese research.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>period</code></td><td>—</td><td>—</td></tr><tr><td><code>scope</code></td><td>—</td><td>—</td></tr><tr><td><code>measure</code></td><td>—</td><td>—</td></tr><tr><td><code>count</code></td><td>cases (or % where stated)</td><td>—</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Periods and scopes differ by source; the rows are not a single time series.</li><li>No national injury totals by year after 2010 were found; JAFA&#39;s annual safety committee reports are not online.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://www.yomiuri.co.jp/sports/etc/20241001-OYT1T50108/">Yomiuri 2024-10-01</a></li><li><a href="https://www.jstage.jst.go.jp/article/jsatj/6/1/6_3/_pdf/-char/ja">Fukuda T. (2020), J. of the Japanese Society of Athletic Training 6(1)</a></li><li><a href="https://americanfootball.jp/wp-content/uploads/2026重大事故注意喚起文.pdf">JAFA serious-accident alert, 2026-08-25</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 14 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>period</th><th>scope</th><th>measure</th><th>count</th><th>note</th><th>source</th></tr></thead>
+    <tbody><tr><td>1981-1989</td><td>Nationwide</td><td>Deaths</td><td>22</td><td>JAFA data</td><td>Yomiuri 2024-10-01</td></tr><tr><td>1991-2003</td><td>Kanto</td><td>Concussions</td><td>235</td><td></td><td>Fukuda 2020, citing Fujitani et al.</td></tr><tr><td>1991-2003</td><td>Kanto</td><td>Serious head injuries</td><td>20</td><td></td><td>Fukuda 2020</td></tr><tr><td>1991-2003</td><td>Kanto</td><td>Acute subdural hematomas (of the serious head injuries)</td><td>18</td><td></td><td>Fukuda 2020</td></tr><tr><td>1991-2003</td><td>Kanto</td><td>Deaths (of the serious head injuries)</td><td>3</td><td></td><td>Fukuda 2020</td></tr><tr><td>1991-2010</td><td>Kanto games</td><td>Head and neck share of game injuries (%)</td><td>16.8</td><td></td><td>Fukuda 2020</td></tr><tr><td>2006-2026</td><td>Reported to JAFA</td><td>Serious head injuries (bleeding in the skull)</td><td>38</td><td>Cluster in August, among first- and second-year players and on small teams; up since 2020-22</td><td>JAFA alert 2026-08-25</td></tr><tr><td>2006-2026</td><td>Reported to JAFA</td><td>Fatal serious head injuries</td><td>4</td><td></td><td>JAFA alert 2026-08-25</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/japan_serious_accidents.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="japan_tv_ratings">
+  <h2>Japan TV ratings found for football</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 3 rows &middot; <code>data/japan_tv_ratings.csv</code> &middot; topic: <a href="japan.html#japan-08">Football in Japan, section 08</a></p>
+  <p>The only published Video Research (Kanto) ratings found for football programmes in Japan.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>programme</code></td><td>—</td><td>—</td></tr><tr><td><code>date</code></td><td>YYYY-MM</td><td>—</td></tr><tr><td><code>broadcaster</code></td><td>—</td><td>—</td></tr><tr><td><code>rating_pct</code></td><td>% (Video Research, Kanto)</td><td>—</td></tr><tr><td><code>source</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>No rating was found for the Rice Bowl, the Koshien Bowl, NFL games on NHK or the Super Bowl in Japan.</li><li>DAZN, Nittele G+ and NFL Game Pass publish no Japan audience or subscriber figures.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://americanfootball.jp/top_news/275/">JAFA year page 1975</a></li><li><a href="https://ja.wikipedia.org/wiki/関西学生アメリカンフットボール連盟">ja.wikipedia 関西学生アメリカンフットボール連盟</a></li><li><a href="https://en.wikipedia.org/wiki/Eyeshield_21">Wikipedia: Eyeshield 21 (citing Video Research)</a></li></ul>
+  <p><strong>Preview</strong> (first 3 of 3 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>programme</th><th>date</th><th>broadcaster</th><th>rating_pct</th><th>source</th></tr></thead>
+    <tbody><tr><td>First Japan Bowl (US college all-stars), live 1 p.m.</td><td>1976-01</td><td>Nippon TV</td><td>11.4</td><td>JAFA 1975 page</td></tr><tr><td>Kansai vs Kyoto college game, recording</td><td>1977-11</td><td>MBS</td><td>7.4</td><td>ja.wikipedia 関西学生アメリカンフットボール連盟</td></tr><tr><td>Eyeshield 21 anime, first episode</td><td>2005-04</td><td>TV Tokyo</td><td>7.5</td><td>Wikipedia: Eyeshield 21 (citing Video Research)</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/japan_tv_ratings.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_season_attendance">
+  <h2>NFL regular-season attendance over time</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 12 rows &middot; <code>data/nfl_season_attendance.csv</code> &middot; topic: <a href="nfl.html#nfl-09">NFL history, section 09</a></p>
+  <p>League-wide regular-season attendance totals and per-game averages.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>season</code></td><td>year</td><td>—</td></tr><tr><td><code>teams</code></td><td>teams</td><td>—</td></tr><tr><td><code>total_attendance</code></td><td>people</td><td>—</td></tr><tr><td><code>per_game_avg</code></td><td>people</td><td>—</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr><tr><td><code>flag</code></td><td>—</td><td>derived = research arithmetic</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Pro Football Reference was read through Internet Archive snapshots; its 1960-1990 snapshots had no table, so 1960 and 1989 are rounded Wikipedia figures.</li><li>Wikipedia gives a different overall average (67,591).</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://web.archive.org/web/20251001151527/https://www.pro-football-reference.com/years/2024/attendance.htm">Pro Football Reference via the Internet Archive</a></li><li><a href="https://en.wikipedia.org/wiki/National_Football_League">Wikipedia: National Football League</a></li><li><a href="https://www.statistico.com/s/nfl-attendance-per-game-by-year">Statistico</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 12 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>season</th><th>teams</th><th>total_attendance</th><th>per_game_avg</th><th>note</th><th>flag</th></tr></thead>
+    <tbody><tr><td>1934</td><td>11</td><td>701884</td><td></td><td></td><td></td></tr><tr><td>1940</td><td>10</td><td>1278599</td><td></td><td></td><td></td></tr><tr><td>1950</td><td>13</td><td>2117747</td><td>27000</td><td>About 27,000 a game over 78 games</td><td>derived</td></tr><tr><td>1960</td><td>13</td><td>3000000</td><td></td><td>About 3M (Rozelle&#39;s first year)</td><td></td></tr><tr><td>1989</td><td>28</td><td>17000000</td><td></td><td>About 17M (Rozelle&#39;s last year)</td><td></td></tr><tr><td>2000</td><td>31</td><td>16351740</td><td>65900</td><td>About 65,900 over 248 games</td><td>derived</td></tr><tr><td>2010</td><td>32</td><td>17140859</td><td>67000</td><td>About 67,000 over 256 games</td><td>derived</td></tr><tr><td>2019</td><td>32</td><td>17040039</td><td>66600</td><td>About 66,600</td><td>derived</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_season_attendance.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="gallup_favorite_sport">
+  <h2>Gallup: Americans&#39; favourite sport to watch</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 11 rows &middot; <code>data/gallup_favorite_sport.csv</code> &middot; topic: <a href="nfl.html#nfl-09">NFL history, section 09</a></p>
+  <p>Share naming each sport as their favourite to watch, in the Gallup readings the research collected.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year</code></td><td>—</td><td>Reading date as given</td></tr><tr><td><code>football_pct</code></td><td>%</td><td>—</td></tr><tr><td><code>baseball_pct</code></td><td>%</td><td>—</td></tr><tr><td><code>basketball_pct</code></td><td>%</td><td>—</td></tr><tr><td><code>soccer_pct</code></td><td>%</td><td>—</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Football has been first in all 23 Gallup readings since 1972 (average 38% in season, 32% out of season); only some readings are listed here.</li><li>Other polls ask different questions (favourite sport vs to watch vs most popular), so they are not mixed in.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://news.gallup.com/poll/714281/football-top-sport-soccer-inching.aspx">Gallup, Sept 2026</a></li><li><a href="https://www.sportsbusinessjournal.com/Articles/2026/09/10/gallup-football-still-americas-favorite-sport-but-losing-young-fans/">SBJ, Sept 2026 (1972 figures)</a></li><li><a href="https://en.wikipedia.org/wiki/Sports_in_the_United_States">Wikipedia: Sports in the United States</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 11 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year</th><th>football_pct</th><th>baseball_pct</th><th>basketball_pct</th><th>soccer_pct</th><th>note</th></tr></thead>
+    <tbody><tr><td>1937</td><td></td><td>34</td><td></td><td></td><td>First Gallup question; baseball led. Football 23% [snippet: 2024 Gallup page]; soccer &lt;1%</td></tr><tr><td>1948</td><td></td><td></td><td></td><td></td><td>Football 2nd, baseball 1st</td></tr><tr><td>1960</td><td></td><td></td><td></td><td></td><td>Football 2nd, baseball 1st</td></tr><tr><td>1972</td><td>38</td><td>19</td><td></td><td></td><td>Football overtakes baseball</td></tr><tr><td>1985</td><td>28</td><td></td><td></td><td></td><td>Low</td></tr><tr><td>1997</td><td></td><td></td><td>17</td><td></td><td>Basketball high (Jordan era)</td></tr><tr><td>2001</td><td>28</td><td></td><td></td><td></td><td>Low</td></tr><tr><td>2006-2007</td><td>43</td><td></td><td></td><td></td><td>High</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/gallup_favorite_sport.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="nfl_record_contracts">
+  <h2>Record NFL contracts (highest average per year when signed)</h2>
+  <p class="meta"><span class="badge medium">medium confidence</span> &middot; 22 rows &middot; <code>data/nfl_record_contracts.csv</code> &middot; topic: <a href="nfl.html#nfl-04">NFL history, section 04</a></p>
+  <p>Each contract that set a new high for average annual value, 1991-2026.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>year_signed</code></td><td>year</td><td>—</td></tr><tr><td><code>player</code></td><td>—</td><td>—</td></tr><tr><td><code>apy_usd_m</code></td><td>US$ millions a year</td><td>Average per year</td></tr><tr><td><code>note</code></td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Derived by the research from nflverse/Over The Cap contract history (largest APY signed in each year that set a new high).</li><li>Nominal dollars.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://github.com/nflverse/nflverse-data/releases/download/contracts/historical_contracts.parquet">nflverse historical_contracts (Over The Cap data)</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 22 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>year_signed</th><th>player</th><th>apy_usd_m</th><th>note</th></tr></thead>
+    <tbody><tr><td>1991</td><td>Dan Marino</td><td>4.09</td><td></td></tr><tr><td>1993</td><td>Troy Aikman</td><td>6.71</td><td>First year of free agency</td></tr><tr><td>1995</td><td>Drew Bledsoe</td><td>6.74</td><td></td></tr><tr><td>1997</td><td>Brett Favre</td><td>7.87</td><td></td></tr><tr><td>1998</td><td>Steve Young</td><td>8.2</td><td></td></tr><tr><td>1999</td><td>Deion Sanders</td><td>11.25</td><td>First non-QB record in the series</td></tr><tr><td>2001</td><td>Brett Favre</td><td>11.5</td><td></td></tr><tr><td>2004</td><td>Peyton Manning</td><td>14</td><td>7 years / $98M</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/nfl_record_contracts.csv" download>Download CSV</a>
+</article>
+
+<article class="ds" id="ja_wikipedia_pageviews">
+  <h2>Japanese Wikipedia pageviews for football articles</h2>
+  <p class="meta"><span class="badge high">high confidence</span> &middot; 120 rows &middot; <code>data/ja_wikipedia_pageviews.csv</code> &middot; topic: <a href="japan.html#japan-08">Football in Japan, section 08</a></p>
+  <p>Yearly human pageviews of football articles on Japanese Wikipedia, with other sports for comparison.</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>article_ja</code></td><td>—</td><td>Japanese article title</td></tr><tr><td><code>article_en</code></td><td>—</td><td>English gloss</td></tr><tr><td><code>year</code></td><td>year</td><td>—</td></tr><tr><td><code>period_note</code></td><td>—</td><td>—</td></tr><tr><td><code>views</code></td><td>pageviews</td><td>Human users, all platforms</td></tr></tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul><li>Wikipedia traffic falls across almost every article, so compare shares between articles, not raw totals.</li><li>2017, 2020 and 2022 were not pulled; 2026 covers January to October only.</li><li>Spikes follow news (the 2018 Nihon University scandal, Matsuzawa in 2026), not only seasons.</li></ul>
+  <p><strong>Sources</strong></p>
+  <ul><li><a href="https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/ja.wikipedia/all-access/user/NFL/monthly/2025110100/2026103100">Wikimedia pageviews API (ja.wikipedia, human users)</a></li></ul>
+  <p><strong>Preview</strong> (first 8 of 120 rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>article_ja</th><th>article_en</th><th>year</th><th>period_note</th><th>views</th></tr></thead>
+    <tbody><tr><td>アメリカンフットボール</td><td>American football</td><td>2016</td><td></td><td>208093</td></tr><tr><td>アメリカンフットボール</td><td>American football</td><td>2018</td><td></td><td>252178</td></tr><tr><td>アメリカンフットボール</td><td>American football</td><td>2019</td><td></td><td>230612</td></tr><tr><td>アメリカンフットボール</td><td>American football</td><td>2021</td><td></td><td>140261</td></tr><tr><td>アメリカンフットボール</td><td>American football</td><td>2023</td><td></td><td>140930</td></tr><tr><td>アメリカンフットボール</td><td>American football</td><td>2024</td><td></td><td>110873</td></tr><tr><td>アメリカンフットボール</td><td>American football</td><td>2025</td><td></td><td>99859</td></tr><tr><td>アメリカンフットボール</td><td>American football</td><td>2026</td><td>partial year (Jan-Oct)</td><td>75659</td></tr></tbody>
+  </table></div>
+  <a class="download" href="data/ja_wikipedia_pageviews.csv" download>Download CSV</a>
+</article>
+
+
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <p>Compiled November 2026 from public sources. Research notes, not official NFL or JAFA data. Figures link to the sources they came from; the <a href="methodology.html">methodology</a> explains how they were gathered and how far to trust them.</p>
+  </div>
+</footer>
+
+</body>
+</html>

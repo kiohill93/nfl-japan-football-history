@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>{{ site_title }}</h1>
+<p class="lede">A data-driven history of the National Football League, from a 1920 meeting in an Ohio car showroom to a $300M salary cap, and of American football in Japan, from a 1934 student league in Tokyo to a sport of about 13,000 registered players today.</p>
+<p class="compiled">{{ compiled }}.</p>
+{% include "_banner.html" %}
+
+<section aria-label="Headline figures" class="tiles">
+{% for t in tiles %}
+  <div class="tile">
+    <div class="value">{{ t.value }}</div>
+    <div class="label">{{ t.label }}</div>
+    {% if t.sub %}<div class="sub">{{ t.sub }}</div>{% endif %}
+  </div>
+{% endfor %}
+</section>
+
+<div class="two-col">
+  <div class="card">
+    <h3>The NFL story</h3>
+    <p>The league began in 1920 as a pact between local club owners. Television made it national: the 1961 Sports Broadcasting Act let clubs pool their TV rights, and Pete Rozelle turned that money into equal revenue sharing, the AFL merger and the Super Bowl. The 1993 labor deal traded free agency for a salary cap that has grown almost ninefold since 1994. Since 2007 the league has played regular-season games abroad, a record nine of them in 2026, and the concussion crisis of the 2000s led to a settlement that has awarded over $1.7B.</p>
+    <p><a href="nfl.html">Read the NFL history</a></p>
+  </div>
+  <div class="card">
+    <h3>Football in Japan</h3>
+    <p>An American missionary, Paul Rusch, organised the first student league in Tokyo in 1934, and Japanese-American Nisei from Hawaii made up most of the early players. After the war, newspaper-sponsored bowls (the Koshien Bowl, the Rice Bowl) and US service games built the sport. It peaked in the bubble years: about 20,700 registered players in 1992, 56,000 at the Rice Bowl and NFL games every week on two networks. About 13,400 players are registered today, the X League is rebuilding after a 2026 governance crisis, and flag football is growing ahead of the LA28 Olympics.</p>
+    <p><a href="japan.html">Read the Japan history</a></p>
+  </div>
+</div>
+
+<h2>Key charts</h2>
+<div class="chart-grid">
+{% for c in chart_list %}{% include "_chart.html" %}{% endfor %}
+</div>
+
+<h2>What is on this site</h2>
+<ul>
+  <li><a href="nfl.html">NFL history</a>: nine topic sections, from the timeline to viewership and fans.</li>
+  <li><a href="japan.html">Football in Japan</a>: eight topic sections, from the 1934 founding to TV, crowds and online interest.</li>
+  <li><a href="people.html">Important people</a>: the major names behind both stories.</li>
+  <li><a href="data.html">Data</a>: {{ n_datasets }} tidy CSV datasets with descriptions, sources and confidence ratings.</li>
+  <li><a href="methodology.html">Methodology</a>: sources, how numbers were gathered and checked, markers, confidence and known gaps.</li>
+</ul>
+{% endblock %}

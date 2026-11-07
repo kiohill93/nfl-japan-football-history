@@ -1,0 +1,15 @@
+period,scope,measure,count,note,source
+1981-1989,Nationwide,Deaths,22,JAFA data,Yomiuri 2024-10-01
+1991-2003,Kanto,Concussions,235,,"Fukuda 2020, citing Fujitani et al."
+1991-2003,Kanto,Serious head injuries,20,,Fukuda 2020
+1991-2003,Kanto,Acute subdural hematomas (of the serious head injuries),18,,Fukuda 2020
+1991-2003,Kanto,Deaths (of the serious head injuries),3,,Fukuda 2020
+1991-2010,Kanto games,Head and neck share of game injuries (%),16.8,,Fukuda 2020
+2006-2026,Reported to JAFA,Serious head injuries (bleeding in the skull),38,"Cluster in August, among first- and second-year players and on small teams; up since 2020-22",JAFA alert 2026-08-25
+2006-2026,Reported to JAFA,Fatal serious head injuries,4,,JAFA alert 2026-08-25
+2026 (to August),Reported to JAFA,Serious accidents,9,Most since 2006,JAFA alert 2026-08-25
+2026 (to August),Reported to JAFA,Acute subdural hematomas,4,1 death,JAFA alert 2026-08-25
+2026 (to August),Reported to JAFA,Brain contusions,1,,JAFA alert 2026-08-25
+2026 (to August),Reported to JAFA,Internal-organ injuries,2,,JAFA alert 2026-08-25
+2026 (to August),Reported to JAFA,Cervical fractures,2,,JAFA alert 2026-08-25
+2026,Chiba University,Death,,A player injured in July died in August [?] search snippet only,search snippet

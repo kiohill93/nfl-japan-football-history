@@ -1,0 +1,1686 @@
+{
+  "compiled": "Compiled November 2026 from public sources",
+  "datasets": [
+    {
+      "id": "super_bowl_us_audience",
+      "file": "data/super_bowl_us_audience.csv",
+      "title": "Super Bowl US TV audience, I (1967) to LX (2026)",
+      "description": "Average US viewers for every Super Bowl, with the households rating and the average cost of a 30-second ad.",
+      "section": "nfl/09",
+      "rows": 60,
+      "columns": [
+        {
+          "name": "super_bowl",
+          "unit": "",
+          "description": "Super Bowl number"
+        },
+        {
+          "name": "year",
+          "unit": "year",
+          "description": "Calendar year the game was played"
+        },
+        {
+          "name": "network",
+          "unit": "",
+          "description": "Main US network(s)"
+        },
+        {
+          "name": "viewers_m",
+          "unit": "millions of viewers",
+          "description": "Average US viewers on the main network(s)"
+        },
+        {
+          "name": "households_rating",
+          "unit": "rating points",
+          "description": "Nielsen households rating"
+        },
+        {
+          "name": "ad_30s_usd",
+          "unit": "US dollars (nominal)",
+          "description": "Average 30-second ad"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": "Split or range values that are not a single number"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Wikipedia: Super Bowl television ratings (Nielsen data)",
+          "url": "https://en.wikipedia.org/wiki/Super_Bowl_television_ratings"
+        },
+        {
+          "name": "Nielsen, Feb 2026",
+          "url": "https://www.nielsen.com/news-center/2026/super-bowl-lx-2026/"
+        }
+      ],
+      "confidence": "high",
+      "caveats": [
+        "Single compilation source (Wikipedia, using Nielsen data); not checked game by game against Nielsen.",
+        "From the 2025 season Nielsen counts more out-of-home and streaming viewing (Big Data + Panel), so 2025-26 figures are not fully comparable with older years.",
+        "Ad prices are nominal dollars, not adjusted for inflation."
+      ]
+    },
+    {
+      "id": "nfl_regular_season_tv",
+      "file": "data/nfl_regular_season_tv.csv",
+      "title": "NFL regular-season TV averages",
+      "description": "Average US viewers per regular-season game: the record 1989 season, the 2016-17 dip and the 2025 season by TV package.",
+      "section": "nfl/09",
+      "rows": 10,
+      "columns": [
+        {
+          "name": "season",
+          "unit": "year",
+          "description": "Season"
+        },
+        {
+          "name": "package",
+          "unit": "",
+          "description": "All games, or one TV package"
+        },
+        {
+          "name": "avg_viewers_m",
+          "unit": "millions of viewers",
+          "description": "Average US viewers per game"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": "Context and marked values"
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": "Source for the row"
+        }
+      ],
+      "sources": [
+        {
+          "name": "NFL.com, Jan 2026",
+          "url": "https://www.nfl.com/news/nfl-sees-second-highest-regular-season-average-viewership-since-1988"
+        },
+        {
+          "name": "Sports Media Watch, Jan 2026",
+          "url": "https://www.sportsmediawatch.com/2026/01/nfl-regular-season-viewership-cbs-nbc-top-season/"
+        },
+        {
+          "name": "Sports Media Watch, 2018",
+          "url": "https://www.sportsmediawatch.com/2018/02/nfl-ratings-decline-2017-analysis/"
+        },
+        {
+          "name": "ESPN, Jan 2018",
+          "url": "https://www.espn.com/nfl/story/_/id/21960086/nfl-television-ratings-97-percent-2017-regular-season"
+        },
+        {
+          "name": "ESPN Press Room",
+          "url": "https://espnpressroom.com/press-release/espns-monday-night-football-records-second-most-watched-regular-season-in-the-companys-20-year-history-of-airing-the-iconic-franchise/"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "No continuous year-by-year series was found in free sources; only the seasons listed here.",
+        "2025 figures use Nielsen's Big Data + Panel method, which raised recent numbers.",
+        "The 2015 figure is from a search snippet only, so it is kept in the note column."
+      ]
+    },
+    {
+      "id": "nfl_salary_cap",
+      "file": "data/nfl_salary_cap.csv",
+      "title": "NFL salary cap by year, 1994-2026",
+      "description": "The per-team salary cap each league year since it began under the 1993 labor deal.",
+      "section": "nfl/03",
+      "rows": 33,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "league year",
+          "description": "League year"
+        },
+        {
+          "name": "cap_usd_m",
+          "unit": "US$ millions",
+          "description": "Cap per NFL Football Operations"
+        },
+        {
+          "name": "spotrac_cap_usd_m",
+          "unit": "US$ millions",
+          "description": "Spotrac's figure, only where it differs"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "NFL Football Operations: salary cap",
+          "url": "https://operations.nfl.com/calendar-events/nfl-free-agency/nfl-salary-cap"
+        },
+        {
+          "name": "Spotrac: NFL CBA",
+          "url": "https://www.spotrac.com/nfl/cba/"
+        }
+      ],
+      "confidence": "high",
+      "caveats": [
+        "2010 was an uncapped year, so it has no value.",
+        "Nominal dollars, not adjusted for inflation."
+      ]
+    },
+    {
+      "id": "nfl_average_salary",
+      "file": "data/nfl_average_salary.csv",
+      "title": "NFL average salary over time",
+      "description": "Average player pay: the AP/NFLPA series for 1970-1999, Expensivity's lower figures for the late 1960s and 1970s, and the 2026 mean contract value.",
+      "section": "nfl/04",
+      "rows": 26,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "average_usd",
+          "unit": "US dollars (nominal)",
+          "description": "Average pay"
+        },
+        {
+          "name": "series",
+          "unit": "",
+          "description": "Which series the value comes from"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "flag",
+          "unit": "",
+          "description": "conflict = sources disagree; derived = arithmetic from a cited dataset"
+        }
+      ],
+      "sources": [
+        {
+          "name": "AP via News On 6 (NFLPA series, 2000)",
+          "url": "https://www.newson6.com/story/5e3685bf2f69d76f6209b3b7/average-salaries-in-the-four-major-sports"
+        },
+        {
+          "name": "Expensivity",
+          "url": "https://www.expensivity.com/pro-football-salary-inflation/"
+        },
+        {
+          "name": "nflverse historical_contracts (Over The Cap data)",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/contracts/historical_contracts.parquet"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "The series count differently (bonuses, roster base); compare within a series, not across.",
+        "The 2026 value is the mean average-per-year of active contracts, not cash paid in a season.",
+        "Nominal dollars. No median series by decade exists in free sources."
+      ]
+    },
+    {
+      "id": "nfl_minimum_salary",
+      "file": "data/nfl_minimum_salary.csv",
+      "title": "NFL minimum salary over time",
+      "description": "Rookie (and early veteran) minimum salaries from the first labor deals and from the 2020 CBA.",
+      "section": "nfl/04",
+      "rows": 10,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "rookie_minimum_usd",
+          "unit": "US dollars",
+          "description": ""
+        },
+        {
+          "name": "veteran_minimum_usd",
+          "unit": "US dollars",
+          "description": "Only for early deals"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "flag",
+          "unit": "",
+          "description": "derived = arithmetic from the cited term sheet"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Wikipedia: NFLPA",
+          "url": "https://en.wikipedia.org/wiki/National_Football_League_Players_Association"
+        },
+        {
+          "name": "NFL.com: 2020 CBA term sheet",
+          "url": "https://www.nfl.com/news/full-term-sheet-of-proposed-collective-bargaining-agreement-0ap3000001102608"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "2020-2026 values are computed from the term sheet's increases (+$100K, +$50K, then +$45K a year), not read from a published table.",
+        "No values for 1971-2019 were collected."
+      ]
+    },
+    {
+      "id": "nfl_league_revenue",
+      "file": "data/nfl_league_revenue.csv",
+      "title": "NFL league revenue over time",
+      "description": "Total league revenue where a figure was found. Most years are missing; several values are estimates or snippets and sit in the note column.",
+      "section": "nfl/03",
+      "rows": 8,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "revenue_usd_b",
+          "unit": "US$ billions",
+          "description": "Only for confirmed figures"
+        },
+        {
+          "name": "measure",
+          "unit": "",
+          "description": "What the figure counts"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "flag",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "Sportico, 2026: how NFL teams make money",
+          "url": "https://www.sportico.com/feature/how-nfl-teams-owners-make-money-1234795113/"
+        },
+        {
+          "name": "Wikipedia: 2011 NFL lockout",
+          "url": "https://en.wikipedia.org/wiki/2011_NFL_lockout"
+        },
+        {
+          "name": "Statista (headline only, paywalled)",
+          "url": "https://www.statista.com/statistics/193457/total-league-revenue-of-the-nfl-since-2005/"
+        },
+        {
+          "name": "House Judiciary SBA staff report, June 2026",
+          "url": "https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/nfl-sba-report-final.pdf"
+        }
+      ],
+      "confidence": "low",
+      "caveats": [
+        "No free year-by-year revenue series exists (Statista is paywalled; S&P Global was blocked).",
+        "Only 2010 and 2025 have confirmed numbers; do not draw a trend line through them."
+      ]
+    },
+    {
+      "id": "nfl_national_revenue_per_team",
+      "file": "data/nfl_national_revenue_per_team.csv",
+      "title": "NFL national money per team",
+      "description": "Equal per-team payouts from national TV and other national revenue.",
+      "section": "nfl/02",
+      "rows": 6,
+      "columns": [
+        {
+          "name": "season",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "usd_m",
+          "unit": "US$ millions",
+          "description": ""
+        },
+        {
+          "name": "measure",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "House Judiciary SBA staff report, June 2026",
+          "url": "https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/nfl-sba-report-final.pdf"
+        },
+        {
+          "name": "Wikipedia: National Football League",
+          "url": "https://en.wikipedia.org/wiki/National_Football_League"
+        },
+        {
+          "name": "Sportico, July 2026: national revenue per team",
+          "url": "https://www.sportico.com/leagues/football/2026/nfl-2025-national-revenue-per-team-1234939659/"
+        },
+        {
+          "name": "Yahoo Sports: Packers finances, 2026",
+          "url": "https://sports.yahoo.com/articles/y-sports-biz-cheese-squeezed-financially-154014025.html"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "TV money and total national revenue are different measures; the 2025 value is a lower bound ('more than $450M')."
+      ]
+    },
+    {
+      "id": "nfl_media_rights_deals",
+      "file": "data/nfl_media_rights_deals.csv",
+      "title": "National media-rights deals by era",
+      "description": "League-wide TV and streaming contracts from 1960 to the 2023-33 deals, with values as reported.",
+      "section": "nfl/02",
+      "rows": 19,
+      "columns": [
+        {
+          "name": "start_year",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "end_year",
+          "unit": "year",
+          "description": "Blank when open-ended or not stated"
+        },
+        {
+          "name": "deal",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "partners",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "value_as_reported",
+          "unit": "",
+          "description": "Value in the source's words"
+        },
+        {
+          "name": "total_usd_m",
+          "unit": "US$ millions (nominal)",
+          "description": "Contract total where one is stated"
+        },
+        {
+          "name": "per_year_usd_m",
+          "unit": "US$ millions a year",
+          "description": "Where only a yearly figure is stated"
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "House Judiciary SBA staff report, June 2026",
+          "url": "https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/nfl-sba-report-final.pdf"
+        },
+        {
+          "name": "Awful Announcing, 2015",
+          "url": "https://awfulannouncing.com/2015/nfl-tv-changed-dramatically-over-the-last-50-years.html"
+        },
+        {
+          "name": "UPI, 1998",
+          "url": "https://www.upi.com/Archives/1998/02/11/Aikman-restructures-contracts/4069887173200/"
+        },
+        {
+          "name": "CNBC, Mar 2021",
+          "url": "https://www.cnbc.com/2021/03/18/nfl-media-rights-deal-2023-2033-amazon-gets-exclusive-thursday-night.html"
+        },
+        {
+          "name": "Wikipedia: NFL Sunday Ticket",
+          "url": "https://en.wikipedia.org/wiki/NFL_Sunday_Ticket"
+        },
+        {
+          "name": "ESPN: NFL Network deal",
+          "url": "https://www.espn.com/espn/story/_/id/47793895/regulators-ok-espn-purchase-nfl-network-redzone-rights-nfl-equity-stake"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Totals mix packages differently by era (some include cable, some do not); 2014-22 total counts broadcast only.",
+        "'About' and 'over' figures are kept as stated; nominal dollars."
+      ]
+    },
+    {
+      "id": "nfl_franchise_values",
+      "file": "data/nfl_franchise_values.csv",
+      "title": "NFL franchise values over time",
+      "description": "Average team values (Forbes and Sportico), the top team, Forbes's 2026 top 10 and record sale prices.",
+      "section": "nfl/02",
+      "rows": 20,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "kind",
+          "unit": "",
+          "description": "Average value, top team, or sale price"
+        },
+        {
+          "name": "team",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "value_usd_b",
+          "unit": "US$ billions (nominal)",
+          "description": ""
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "Quartz: Forbes 2026 NFL valuations",
+          "url": "https://qz.com/nfl-most-valuable-team-2026"
+        },
+        {
+          "name": "Wikipedia: Forbes list of the most valuable sports teams",
+          "url": "https://en.wikipedia.org/wiki/Forbes_list_of_the_most_valuable_sports_teams"
+        },
+        {
+          "name": "House Judiciary SBA staff report, June 2026",
+          "url": "https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/evo-media-document/nfl-sba-report-final.pdf"
+        },
+        {
+          "name": "Wikipedia: National Football League",
+          "url": "https://en.wikipedia.org/wiki/National_Football_League"
+        },
+        {
+          "name": "Sportico, 2026: how NFL teams make money",
+          "url": "https://www.sportico.com/feature/how-nfl-teams-owners-make-money-1234795113/"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Forbes pages were blocked (403); Forbes figures come via Quartz's write-up.",
+        "Valuations are estimates by publications, not audited figures; Forbes and Sportico differ.",
+        "No average-value series before 2022 was collected."
+      ]
+    },
+    {
+      "id": "nfl_league_size",
+      "file": "data/nfl_league_size.csv",
+      "title": "NFL league size over time",
+      "description": "Number of teams at each expansion step since 1960.",
+      "section": "nfl/01",
+      "rows": 6,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "nfl_teams",
+          "unit": "teams",
+          "description": ""
+        },
+        {
+          "name": "afl_teams",
+          "unit": "teams",
+          "description": "Rival AFL, 1960 only"
+        },
+        {
+          "name": "change",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "Wikipedia: National Football League",
+          "url": "https://en.wikipedia.org/wiki/National_Football_League"
+        }
+      ],
+      "confidence": "high",
+      "caveats": [
+        "Only the steps in the research table; intermediate years (for example 1961, 1966-68 additions) are not listed as rows.",
+        "Wikipedia's 'Expansion of the NFL' page does not exist, so years come from the team table on the main NFL article."
+      ]
+    },
+    {
+      "id": "nfl_international_games",
+      "file": "data/nfl_international_games.csv",
+      "title": "NFL regular-season games outside the US, 2005-2026",
+      "description": "Every regular-season game played abroad, with city, venue (where the research gives it), teams and attendance.",
+      "section": "nfl/09",
+      "rows": 65,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "season",
+          "description": ""
+        },
+        {
+          "name": "date",
+          "unit": "YYYY-MM-DD",
+          "description": "Only where the research gives it"
+        },
+        {
+          "name": "city",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "country",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "venue",
+          "unit": "",
+          "description": "Blank where a row lists several venues without saying which game was where"
+        },
+        {
+          "name": "teams",
+          "unit": "",
+          "description": "As listed in the source table"
+        },
+        {
+          "name": "attendance",
+          "unit": "people",
+          "description": "Announced attendance"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "Wikipedia: NFL International Series",
+          "url": "https://en.wikipedia.org/wiki/NFL_International_Series"
+        },
+        {
+          "name": "Wikipedia: American Bowl",
+          "url": "https://en.wikipedia.org/wiki/American_Bowl"
+        },
+        {
+          "name": "ESPN, 2007",
+          "url": "https://www.espn.com/nfl/news/story?id=2920738"
+        },
+        {
+          "name": "NFL media release: 2026 international games",
+          "url": "https://media.nfl.com/news-and-releases/international/nfl-unveils-2026-international-games-schedule"
+        }
+      ],
+      "confidence": "high",
+      "caveats": [
+        "Attendance is set mostly by stadium capacity: international games sell out.",
+        "Venues per game are missing for some London, Mexico City and Germany rows; the source table grouped them.",
+        "Three 2026 games (Madrid, Munich, Mexico City) were still to be played on the compile date."
+      ]
+    },
+    {
+      "id": "nfl_games_in_japan",
+      "file": "data/nfl_games_in_japan.csv",
+      "title": "NFL games in Japan, 1976-2005",
+      "description": "The 1976 Korakuen game and the 13 preseason American Bowls in Japan (1989-2005): 14 games in all.",
+      "section": "japan/08",
+      "rows": 14,
+      "columns": [
+        {
+          "name": "date",
+          "unit": "YYYY-MM-DD",
+          "description": "Local date"
+        },
+        {
+          "name": "year",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "result",
+          "unit": "",
+          "description": "Winner first"
+        },
+        {
+          "name": "venue",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "city",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "attendance",
+          "unit": "people",
+          "description": "Only where one figure is reported"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "JAFA year page 1976",
+          "url": "https://americanfootball.jp/top_news/276/"
+        },
+        {
+          "name": "NFL.com: the 1976 Tokyo game",
+          "url": "https://www.nfl.com/news/adventures-abroad-remembering-nfl-s-1976-foray-into-japan-0ap3000000739785"
+        },
+        {
+          "name": "UPI, 1990-08-02",
+          "url": "https://www.upi.com/Archives/1990/08/02/Seahawks-Broncos-play-American-Bowl-Sunday-in-Japan/2964649569600/"
+        },
+        {
+          "name": "Wikipedia: American Bowl",
+          "url": "https://en.wikipedia.org/wiki/American_Bowl"
+        },
+        {
+          "name": "JAFA year page 1992",
+          "url": "https://americanfootball.jp/top_news/292/"
+        },
+        {
+          "name": "JAFA year page 1996",
+          "url": "https://americanfootball.jp/top_news/296/"
+        },
+        {
+          "name": "JAFA year page 2002",
+          "url": "https://americanfootball.jp/top_news/302/"
+        },
+        {
+          "name": "nflers.neocities.org: American Bowl sites",
+          "url": "https://nflers.neocities.org/nflamericanbowl"
+        },
+        {
+          "name": "Jiji, 2026-10-30",
+          "url": "https://www.jiji.com/jc/article?k=2026102900747&g=spo"
+        },
+        {
+          "name": "Japan Times, 2015",
+          "url": "https://www.japantimes.co.jp/sports/2015/02/04/more-sports/football/football-diehards-yearn-nfls-return-japan/"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Crowds were found for only one game (1976); 1989 has two conflicting figures; 1990-2005 crowds were not found.",
+        "All are exhibition (preseason) games; no regular-season game has been played in Asia.",
+        "Tokyo Dome holds about 45,000-55,000 for football [?], so sold-out games would be in that range; not used as data."
+      ]
+    },
+    {
+      "id": "nfl_cte_brain_bank",
+      "file": "data/nfl_cte_brain_bank.csv",
+      "title": "CTE in donated brains of former NFL players (Boston University)",
+      "description": "Share of former NFL players' donated brains diagnosed with CTE in three published studies.",
+      "section": "nfl/06",
+      "rows": 3,
+      "columns": [
+        {
+          "name": "year_published",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "journal",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "cte_cases",
+          "unit": "brains",
+          "description": "Diagnosed with CTE"
+        },
+        {
+          "name": "brains_studied",
+          "unit": "brains",
+          "description": ""
+        },
+        {
+          "name": "share_pct",
+          "unit": "%",
+          "description": "As published"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Wikipedia: Concussions in American football",
+          "url": "https://en.wikipedia.org/wiki/Concussions_in_American_football"
+        }
+      ],
+      "confidence": "high",
+      "caveats": [
+        "Donated brains, often from families who already suspected disease: these shares do not measure how common CTE is among all players.",
+        "CTE can only be diagnosed after death."
+      ]
+    },
+    {
+      "id": "nfl_concussion_measures",
+      "file": "data/nfl_concussion_measures.csv",
+      "title": "NFL concussion settlement and safety figures",
+      "description": "Concussion settlement totals (as of Nov 2, 2026) and recent safety measures.",
+      "section": "nfl/06",
+      "rows": 10,
+      "columns": [
+        {
+          "name": "measure",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "as_of",
+          "unit": "date or season",
+          "description": ""
+        },
+        {
+          "name": "value",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "unit",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "NFL Concussion Settlement official site",
+          "url": "https://www.nflconcussionsettlement.com/Reports_Statistics.aspx"
+        },
+        {
+          "name": "ESPN, 2021 (race-norming)",
+          "url": "https://www.espn.com/nfl/story/_/id/31554110/nfl-halt-race-norming-review-black-claims-1-billion-concussion-settlement"
+        },
+        {
+          "name": "Wikipedia: Concussions in American football",
+          "url": "https://en.wikipedia.org/wiki/Concussions_in_American_football"
+        },
+        {
+          "name": "NFL.com: 2025 injury data",
+          "url": "https://www.nfl.com/playerhealthandsafety/health-and-wellness/injury-data/2025-season-key-takeaways"
+        },
+        {
+          "name": "PubMed 40746051 (Am J Sports Med 2025)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40746051/"
+        }
+      ],
+      "confidence": "high",
+      "caveats": [
+        "The 2025 season's total concussion count was not found in the pages opened.",
+        "Settlement figures change over time; these are a snapshot."
+      ]
+    },
+    {
+      "id": "japan_registered_players",
+      "file": "data/japan_registered_players.csv",
+      "title": "Japan registered American football players over time",
+      "description": "Teams and registered players from JAFA's history pages and from JAFA's answers to the Sasakawa Sports Foundation (SSF) survey of national federations.",
+      "section": "japan/07",
+      "rows": 10,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "year",
+          "description": "Calendar or fiscal year"
+        },
+        {
+          "name": "year_label",
+          "unit": "",
+          "description": "As written in the source"
+        },
+        {
+          "name": "teams",
+          "unit": "teams",
+          "description": ""
+        },
+        {
+          "name": "players",
+          "unit": "players",
+          "description": "Only for values confirmed in an opened source"
+        },
+        {
+          "name": "series",
+          "unit": "",
+          "description": "Which count the row comes from"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "flag",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "JAFA year page 1934",
+          "url": "https://americanfootball.jp/top_news/234/"
+        },
+        {
+          "name": "JAFA year page 1992",
+          "url": "https://americanfootball.jp/top_news/292/"
+        },
+        {
+          "name": "JSPO sport-population report 2020",
+          "url": "https://www.japan-sports.or.jp/Portals/0/data/kikaku/R2Population_report.pdf"
+        },
+        {
+          "name": "JAFA year page 1996",
+          "url": "https://americanfootball.jp/top_news/296/"
+        },
+        {
+          "name": "JAFA year page 2000",
+          "url": "https://americanfootball.jp/top_news/300/"
+        },
+        {
+          "name": "JAFA year page 2010",
+          "url": "https://americanfootball.jp/top_news/310/"
+        },
+        {
+          "name": "Flag Football Global (citing SSF and others)",
+          "url": "https://www.flagfootballglobal.com/ja/articles/japan-american-football-registered-players-and-flag-football"
+        },
+        {
+          "name": "SSF Survey of National Federations 2024, table 3",
+          "url": "https://www.ssf.or.jp/files/NF2024cp_03.pdf"
+        },
+        {
+          "name": "JAFA flag registration notice",
+          "url": "https://americanfootball.jp/wp-content/uploads/164_01.pdf"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Two counting methods (JAFA's own history pages and the SSF survey) are mixed; read it as a trend, not exact year-on-year change.",
+        "Years between the rows are missing, not zero."
+      ]
+    },
+    {
+      "id": "japan_players_by_level",
+      "file": "data/japan_players_by_level.csv",
+      "title": "Japan registered players by level",
+      "description": "Breakdowns by school or adult level where JAFA's history pages give them.",
+      "section": "japan/07",
+      "rows": 10,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "level",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "teams",
+          "unit": "teams",
+          "description": ""
+        },
+        {
+          "name": "players",
+          "unit": "players",
+          "description": ""
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "JAFA year page 1992",
+          "url": "https://americanfootball.jp/top_news/292/"
+        },
+        {
+          "name": "JAFA year page 2000",
+          "url": "https://americanfootball.jp/top_news/300/"
+        },
+        {
+          "name": "JAFA year page 2007",
+          "url": "https://americanfootball.jp/top_news/307/"
+        },
+        {
+          "name": "Nikkei 2022-07-26 (paywalled; first paragraph)",
+          "url": "https://www.nikkei.com/article/DGXZQODH212CN0R20C22A7000000/"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "No yearly breakdown by level after 2010 was found.",
+        "The 2022 figure is approximate (Nikkei's first paragraph)."
+      ]
+    },
+    {
+      "id": "japan_big_game_attendance",
+      "file": "data/japan_big_game_attendance.csv",
+      "title": "Japan big-game attendance: single games",
+      "description": "Announced crowds for named games: the Rice Bowl, Koshien Bowl, corporate finals, US-college all-star games and the X League.",
+      "section": "japan/08",
+      "rows": 41,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "year",
+          "description": "Year the game was played (Rice Bowl: January)"
+        },
+        {
+          "name": "event",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "venue",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "attendance",
+          "unit": "people",
+          "description": "Only for single, unmarked figures"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "JAFA domestic results tables",
+          "url": "https://americanfootball.jp/top_news/181/"
+        },
+        {
+          "name": "JAFA English page",
+          "url": "https://americanfootball.jp/english/"
+        },
+        {
+          "name": "FISU, 2018",
+          "url": "https://www.fisu.net/2018/06/17/a-brief-history-of-american-football-in-japan/"
+        },
+        {
+          "name": "JAFA year page 1938",
+          "url": "https://americanfootball.jp/top_news/238/"
+        },
+        {
+          "name": "JAFA year page 1947",
+          "url": "https://americanfootball.jp/top_news/247/"
+        },
+        {
+          "name": "luckyshow.org: US service bowls",
+          "url": "http://www.luckyshow.org/football/Rice%20Bowl%20%28Service%20Teams%29.htm"
+        },
+        {
+          "name": "JAFA year page 1978",
+          "url": "https://americanfootball.jp/top_news/278/"
+        },
+        {
+          "name": "JAFA year page 1983",
+          "url": "https://americanfootball.jp/top_news/283/"
+        },
+        {
+          "name": "JAFA year page 1991",
+          "url": "https://americanfootball.jp/top_news/291/"
+        },
+        {
+          "name": "JAFA year page 1992",
+          "url": "https://americanfootball.jp/top_news/292/"
+        },
+        {
+          "name": "amefootojisan.com fan blog (X League 2024)",
+          "url": "https://www.amefootojisan.com/kankyaku-xlg-24wk1-3/"
+        },
+        {
+          "name": "JAFA FY2025 business report",
+          "url": "https://americanfootball.jp/wp-content/uploads/2025年度_事業報告書.pdf"
+        },
+        {
+          "name": "Nikkei (licence article; summary line)",
+          "url": "https://www.nikkei.com/article/DGXZQODH048MK0U5A800C2000000/"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Announced crowds, mostly rounded.",
+        "Only the years the research names individually; see the era table for the typical ranges.",
+        "The two JAFA sources disagree on the January 2025 Rice Bowl (17,694 vs 17,885)."
+      ]
+    },
+    {
+      "id": "japan_bowl_attendance_by_era",
+      "file": "data/japan_bowl_attendance_by_era.csv",
+      "title": "Japan bowl attendance by era",
+      "description": "Typical crowd ranges by era for the Rice Bowl, the Koshien Bowl and the corporate final.",
+      "section": "japan/08",
+      "rows": 21,
+      "columns": [
+        {
+          "name": "event",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "era_start",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "era_end",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "format",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "venue",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "typical_low",
+          "unit": "people",
+          "description": "Low end of the typical range"
+        },
+        {
+          "name": "typical_high",
+          "unit": "people",
+          "description": "High end of the typical range"
+        },
+        {
+          "name": "highs_and_lows",
+          "unit": "",
+          "description": "Named years"
+        }
+      ],
+      "sources": [
+        {
+          "name": "JAFA domestic results tables",
+          "url": "https://americanfootball.jp/top_news/181/"
+        },
+        {
+          "name": "JAFA year page 1991",
+          "url": "https://americanfootball.jp/top_news/291/"
+        },
+        {
+          "name": "JAFA year page 1992",
+          "url": "https://americanfootball.jp/top_news/292/"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Ranges summarise JAFA's yearly results tables; individual years can fall outside them (for example 40,000 in 1955).",
+        "Announced crowds, mostly rounded."
+      ]
+    },
+    {
+      "id": "jafa_revenue_fy2025",
+      "file": "data/jafa_revenue_fy2025.csv",
+      "title": "JAFA income and spending, FY2025 (April 2025 - March 2026)",
+      "description": "The national federation's revenue lines from its FY2025 accounts.",
+      "section": "japan/02",
+      "rows": 13,
+      "columns": [
+        {
+          "name": "line",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "parent",
+          "unit": "",
+          "description": "Line this item belongs to"
+        },
+        {
+          "name": "amount_jpy_m",
+          "unit": "¥ millions",
+          "description": ""
+        },
+        {
+          "name": "share_of_revenue_pct",
+          "unit": "%",
+          "description": "Share of total revenue (research arithmetic from the accounts)"
+        }
+      ],
+      "sources": [
+        {
+          "name": "JAFA FY2025 accounts",
+          "url": "https://americanfootball.jp/wp-content/uploads/JAFA決算書_2025.4.1-2026.3.31.pdf"
+        },
+        {
+          "name": "JAFA FY2025 business report",
+          "url": "https://americanfootball.jp/wp-content/uploads/2025年度_事業報告書.pdf"
+        }
+      ],
+      "confidence": "high",
+      "caveats": [
+        "Sub-lines do not add up to their parents; the rest is 'other' lines not itemised in the research.",
+        "Shares were computed from the accounts, not published by JAFA."
+      ]
+    },
+    {
+      "id": "japan_sport_participation",
+      "file": "data/japan_sport_participation.csv",
+      "title": "Japan registered players by sport, FY2024",
+      "description": "American football's registered players next to other team sports in Japan.",
+      "section": "japan/07",
+      "rows": 7,
+      "columns": [
+        {
+          "name": "sport",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "governing_body",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "registered_players",
+          "unit": "players",
+          "description": ""
+        },
+        {
+          "name": "multiple_of_football",
+          "unit": "x",
+          "description": "About how many times football's count (research arithmetic)"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "SSF Survey of National Federations 2024, table 3",
+          "url": "https://www.ssf.or.jp/files/NF2024cp_03.pdf"
+        },
+        {
+          "name": "Flag Football Global (citing SSF and others)",
+          "url": "https://www.flagfootballglobal.com/ja/articles/japan-american-football-registered-players-and-flag-football"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Federations count registration differently; multiples are approximate.",
+        "Some rows come from Flag Football Global's summary rather than the SSF table itself."
+      ]
+    },
+    {
+      "id": "japanese_players_north_america",
+      "file": "data/japanese_players_north_america.csv",
+      "title": "Japanese players in North American football and the NFL's pathways",
+      "description": "Japanese players who reached the CFL, NFL camps, practice squads, the NFL's development leagues or a top US college.",
+      "section": "japan/06",
+      "rows": 9,
+      "columns": [
+        {
+          "name": "player",
+          "unit": "",
+          "description": "Family name first for players usually known that way"
+        },
+        {
+          "name": "position",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "path",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "year",
+          "unit": "year",
+          "description": "Key year"
+        },
+        {
+          "name": "milestone",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "Wikipedia: Taku Lee",
+          "url": "https://en.wikipedia.org/wiki/Taku_Lee"
+        },
+        {
+          "name": "Wikipedia: Kansei Matsuzawa",
+          "url": "https://en.wikipedia.org/wiki/Kansei_Matsuzawa"
+        },
+        {
+          "name": "NFL Japan, 2025-12-15 (IPP)",
+          "url": "https://nfljapan.com/headlines/117785"
+        },
+        {
+          "name": "JAFA year page 1996",
+          "url": "https://americanfootball.jp/top_news/296/"
+        },
+        {
+          "name": "ja.wikipedia 河口正史",
+          "url": "https://ja.wikipedia.org/wiki/河口正史"
+        },
+        {
+          "name": "ja.wikipedia 山田晋三",
+          "url": "https://ja.wikipedia.org/wiki/山田晋三"
+        },
+        {
+          "name": "ja.wikipedia 木下典明",
+          "url": "https://ja.wikipedia.org/wiki/木下典明"
+        },
+        {
+          "name": "ja.wikipedia 李卓",
+          "url": "https://ja.wikipedia.org/wiki/李卓"
+        },
+        {
+          "name": "Sporting News Japan, Oct 2026",
+          "url": "https://www.sportingnews.com/jp/tsn/news/2026-10-21-japanese-players-us-college-football/f913ee5293cadc4589c9ae67"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Not a complete list: US college walk-ons and other camp invitees were not researched.",
+        "Sources disagree on who was the first Japanese player in an NFL game (1996 trio vs Kawaguchi, 2002)."
+      ]
+    },
+    {
+      "id": "japan_serious_accidents",
+      "file": "data/japan_serious_accidents.csv",
+      "title": "Japan serious football accidents",
+      "description": "Deaths, serious head injuries and other serious accidents from JAFA data and Japanese research.",
+      "section": "japan/05",
+      "rows": 14,
+      "columns": [
+        {
+          "name": "period",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "scope",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "measure",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "count",
+          "unit": "cases (or % where stated)",
+          "description": ""
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "Yomiuri 2024-10-01",
+          "url": "https://www.yomiuri.co.jp/sports/etc/20241001-OYT1T50108/"
+        },
+        {
+          "name": "Fukuda T. (2020), J. of the Japanese Society of Athletic Training 6(1)",
+          "url": "https://www.jstage.jst.go.jp/article/jsatj/6/1/6_3/_pdf/-char/ja"
+        },
+        {
+          "name": "JAFA serious-accident alert, 2026-08-25",
+          "url": "https://americanfootball.jp/wp-content/uploads/2026重大事故注意喚起文.pdf"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Periods and scopes differ by source; the rows are not a single time series.",
+        "No national injury totals by year after 2010 were found; JAFA's annual safety committee reports are not online."
+      ]
+    },
+    {
+      "id": "japan_tv_ratings",
+      "file": "data/japan_tv_ratings.csv",
+      "title": "Japan TV ratings found for football",
+      "description": "The only published Video Research (Kanto) ratings found for football programmes in Japan.",
+      "section": "japan/08",
+      "rows": 3,
+      "columns": [
+        {
+          "name": "programme",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "date",
+          "unit": "YYYY-MM",
+          "description": ""
+        },
+        {
+          "name": "broadcaster",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "rating_pct",
+          "unit": "% (Video Research, Kanto)",
+          "description": ""
+        },
+        {
+          "name": "source",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "JAFA year page 1975",
+          "url": "https://americanfootball.jp/top_news/275/"
+        },
+        {
+          "name": "ja.wikipedia 関西学生アメリカンフットボール連盟",
+          "url": "https://ja.wikipedia.org/wiki/関西学生アメリカンフットボール連盟"
+        },
+        {
+          "name": "Wikipedia: Eyeshield 21 (citing Video Research)",
+          "url": "https://en.wikipedia.org/wiki/Eyeshield_21"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "No rating was found for the Rice Bowl, the Koshien Bowl, NFL games on NHK or the Super Bowl in Japan.",
+        "DAZN, Nittele G+ and NFL Game Pass publish no Japan audience or subscriber figures."
+      ]
+    },
+    {
+      "id": "nfl_season_attendance",
+      "file": "data/nfl_season_attendance.csv",
+      "title": "NFL regular-season attendance over time",
+      "description": "League-wide regular-season attendance totals and per-game averages.",
+      "section": "nfl/09",
+      "rows": 12,
+      "columns": [
+        {
+          "name": "season",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "teams",
+          "unit": "teams",
+          "description": ""
+        },
+        {
+          "name": "total_attendance",
+          "unit": "people",
+          "description": ""
+        },
+        {
+          "name": "per_game_avg",
+          "unit": "people",
+          "description": ""
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "flag",
+          "unit": "",
+          "description": "derived = research arithmetic"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Pro Football Reference via the Internet Archive",
+          "url": "https://web.archive.org/web/20251001151527/https://www.pro-football-reference.com/years/2024/attendance.htm"
+        },
+        {
+          "name": "Wikipedia: National Football League",
+          "url": "https://en.wikipedia.org/wiki/National_Football_League"
+        },
+        {
+          "name": "Statistico",
+          "url": "https://www.statistico.com/s/nfl-attendance-per-game-by-year"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Pro Football Reference was read through Internet Archive snapshots; its 1960-1990 snapshots had no table, so 1960 and 1989 are rounded Wikipedia figures.",
+        "Wikipedia gives a different overall average (67,591)."
+      ]
+    },
+    {
+      "id": "gallup_favorite_sport",
+      "file": "data/gallup_favorite_sport.csv",
+      "title": "Gallup: Americans' favourite sport to watch",
+      "description": "Share naming each sport as their favourite to watch, in the Gallup readings the research collected.",
+      "section": "nfl/09",
+      "rows": 11,
+      "columns": [
+        {
+          "name": "year",
+          "unit": "",
+          "description": "Reading date as given"
+        },
+        {
+          "name": "football_pct",
+          "unit": "%",
+          "description": ""
+        },
+        {
+          "name": "baseball_pct",
+          "unit": "%",
+          "description": ""
+        },
+        {
+          "name": "basketball_pct",
+          "unit": "%",
+          "description": ""
+        },
+        {
+          "name": "soccer_pct",
+          "unit": "%",
+          "description": ""
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "Gallup, Sept 2026",
+          "url": "https://news.gallup.com/poll/714281/football-top-sport-soccer-inching.aspx"
+        },
+        {
+          "name": "SBJ, Sept 2026 (1972 figures)",
+          "url": "https://www.sportsbusinessjournal.com/Articles/2026/09/10/gallup-football-still-americas-favorite-sport-but-losing-young-fans/"
+        },
+        {
+          "name": "Wikipedia: Sports in the United States",
+          "url": "https://en.wikipedia.org/wiki/Sports_in_the_United_States"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Football has been first in all 23 Gallup readings since 1972 (average 38% in season, 32% out of season); only some readings are listed here.",
+        "Other polls ask different questions (favourite sport vs to watch vs most popular), so they are not mixed in."
+      ]
+    },
+    {
+      "id": "nfl_record_contracts",
+      "file": "data/nfl_record_contracts.csv",
+      "title": "Record NFL contracts (highest average per year when signed)",
+      "description": "Each contract that set a new high for average annual value, 1991-2026.",
+      "section": "nfl/04",
+      "rows": 22,
+      "columns": [
+        {
+          "name": "year_signed",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "player",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "apy_usd_m",
+          "unit": "US$ millions a year",
+          "description": "Average per year"
+        },
+        {
+          "name": "note",
+          "unit": "",
+          "description": ""
+        }
+      ],
+      "sources": [
+        {
+          "name": "nflverse historical_contracts (Over The Cap data)",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/contracts/historical_contracts.parquet"
+        }
+      ],
+      "confidence": "medium",
+      "caveats": [
+        "Derived by the research from nflverse/Over The Cap contract history (largest APY signed in each year that set a new high).",
+        "Nominal dollars."
+      ]
+    },
+    {
+      "id": "ja_wikipedia_pageviews",
+      "file": "data/ja_wikipedia_pageviews.csv",
+      "title": "Japanese Wikipedia pageviews for football articles",
+      "description": "Yearly human pageviews of football articles on Japanese Wikipedia, with other sports for comparison.",
+      "section": "japan/08",
+      "rows": 120,
+      "columns": [
+        {
+          "name": "article_ja",
+          "unit": "",
+          "description": "Japanese article title"
+        },
+        {
+          "name": "article_en",
+          "unit": "",
+          "description": "English gloss"
+        },
+        {
+          "name": "year",
+          "unit": "year",
+          "description": ""
+        },
+        {
+          "name": "period_note",
+          "unit": "",
+          "description": ""
+        },
+        {
+          "name": "views",
+          "unit": "pageviews",
+          "description": "Human users, all platforms"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Wikimedia pageviews API (ja.wikipedia, human users)",
+          "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/ja.wikipedia/all-access/user/NFL/monthly/2025110100/2026103100"
+        }
+      ],
+      "confidence": "high",
+      "caveats": [
+        "Wikipedia traffic falls across almost every article, so compare shares between articles, not raw totals.",
+        "2017, 2020 and 2022 were not pulled; 2026 covers January to October only.",
+        "Spikes follow news (the 2018 Nihon University scandal, Matsuzawa in 2026), not only seasons."
+      ]
+    }
+  ]
+}

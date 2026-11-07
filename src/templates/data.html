@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Data</h1>
+<p class="lede">{{ datasets|length }} datasets extracted from the research tables. Each is a tidy CSV with one row per observation. The full catalogue, with columns, units, sources, confidence and caveats, is in <a href="data/catalog.json">catalog.json</a>.</p>
+<p class="compiled">{{ compiled }}.</p>
+{% include "_banner.html" %}
+<nav class="toc" aria-label="Datasets">
+  <strong>Datasets</strong>
+  <ol>
+  {% for d in datasets %}<li><a href="#{{ d.id }}">{{ d.title }}</a></li>{% endfor %}
+  </ol>
+</nav>
+{% for d in datasets %}
+<article class="ds" id="{{ d.id }}">
+  <h2>{{ d.title }}</h2>
+  <p class="meta"><span class="badge {{ d.confidence }}">{{ d.confidence }} confidence</span> &middot; {{ d.rows }} rows &middot; <code>{{ d.file }}</code> &middot; topic: <a href="{{ d.page_href }}">{{ d.page_label }}</a></p>
+  <p>{{ d.description }}</p>
+  <details>
+    <summary>Columns and units</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Column</th><th>Unit</th><th>Description</th></tr></thead>
+      <tbody>{% for c in d.columns %}<tr><td><code>{{ c.name }}</code></td><td>{{ c.unit or "—" }}</td><td>{{ c.description or "—" }}</td></tr>{% endfor %}</tbody>
+    </table></div>
+  </details>
+  <p><strong>Caveats</strong></p>
+  <ul>{% for cv in d.caveats %}<li>{{ cv }}</li>{% endfor %}</ul>
+  <p><strong>Sources</strong></p>
+  <ul>{% for s in d.sources %}<li><a href="{{ s.url }}">{{ s.name }}</a></li>{% endfor %}</ul>
+  <p><strong>Preview</strong> (first {{ d.preview|length }} of {{ d.rows }} rows)</p>
+  <div class="table-wrap"><table>
+    <thead><tr>{% for c in d.columns %}<th>{{ c.name }}</th>{% endfor %}</tr></thead>
+    <tbody>{% for r in d.preview %}<tr>{% for c in d.columns %}<td>{{ r[c.name] }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+  </table></div>
+  <a class="download" href="data/{{ d.id }}.csv" download>Download CSV</a>
+</article>
+{% endfor %}
+{% endblock %}

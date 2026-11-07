@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology | NFL and Japan Football History</title>
+<meta name="description" content="How the research was done: sources, checks, markers, confidence and gaps.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">NFL and Japan Football History</a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="nfl.html">NFL history</a></li>
+        <li><a href="japan.html">Football in Japan</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="methodology.html" aria-current="page">Methodology</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="top">
+
+<h1 id="methodology">Methodology</h1>
+<p>Compiled November 2026 from public sources. This page explains where the numbers on this site come from, how they were checked, what the markers mean and what is missing.</p>
+<h2 id="what-this-is">What this is</h2>
+<p>Research notes on two subjects: the history of the NFL (1920 to November 2026) and the history of American football in Japan (1934 to November 2026). The notes summarise public sources in their own words, link each fact to the page it came from, and quote sparingly. They are not official NFL, NFL Japan, JAFA or X League data, and no organisation reviewed them.</p>
+<h2 id="how-the-research-was-done">How the research was done</h2>
+<ul>
+<li><strong>Desk research of public sources, in Japanese and English</strong>, carried out in late October and early November 2026. The NFL history rests mostly on English sources; the Japan history mostly on Japanese ones (JAFA, Japanese Wikipedia, Japanese newspapers and government documents).</li>
+<li><strong>Web search, then page reads.</strong> Searches found candidate pages; facts were taken only from pages that were opened and read. Where a figure was seen only in a search-result snippet, it is marked as such.</li>
+<li><strong>Official pages and free data APIs where they exist.</strong> Examples: JAFA's 90-year history (one page per year, 1934-2023) and its FY2025 accounts; NFL Football Operations for the salary cap; the NFL Concussion Settlement site; the Sasakawa Sports Foundation's federation survey; the Wikimedia pageviews API; PubMed's E-utilities API; nflverse's contract data (Over The Cap); Gallup.</li>
+<li><strong>Blocked pages.</strong> When a site refused automated requests, the research tried a plain request, the site's own feeds, and archived copies (Pro Football Reference attendance tables were read through Internet Archive snapshots). Paywalled articles were used only as far as their public summary line; that is noted where it applies.</li>
+<li><strong>Numbers checked against a second source where possible.</strong> For example: the salary cap (NFL Football Operations against Spotrac, with both shown where they differ); league revenue in 2010 (Sportico against Wikipedia); Japan's FY2024 registered players (read directly from the SSF survey PDF and matched against Flag Football Global's summary); the 1946 Atom Bowl (a fan-run list against Paleofuture's account). Where a second source disagreed, both figures are given and the row is marked <strong class="marker m-conflict">[conflict]</strong>.</li>
+<li><strong>Arithmetic is labelled.</strong> Shares, multiples, per-game averages and contract records that the research computed itself are marked <strong class="marker m-derived">[derived]</strong> (or described as "my arithmetic") and the source data is named.</li>
+<li><strong>Each topic file ends with a source list</strong> in two parts: the sources that answered, and the ones that came up empty or only partly answered.</li>
+</ul>
+<h2 id="how-to-read-the-markers">How to read the markers</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Marker</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong class="marker m-unconfirmed">[unconfirmed]</strong></td>
+<td>Seen only in a search snippet or a single weak source (used in the NFL sections)</td>
+</tr>
+<tr>
+<td><strong class="marker m-unconfirmed">[?]</strong></td>
+<td>Not confirmed by a second source, or seen only in a snippet (used in the Japan sections)</td>
+</tr>
+<tr>
+<td><strong class="marker m-conflict">[conflict]</strong></td>
+<td>Sources disagree; both versions are given and the disagreement is explained nearby</td>
+</tr>
+<tr>
+<td><strong class="marker m-derived">[derived]</strong></td>
+<td>Computed by the research from a cited source</td>
+</tr>
+<tr>
+<td><strong class="marker m-derived">[inferred]</strong></td>
+<td>Estimated from a source's headline rather than stated in it</td>
+</tr>
+<tr>
+<td><strong class="marker m-unconfirmed">[snippet]</strong></td>
+<td>Read from a search-result snippet; the full page was not opened</td>
+</tr>
+<tr>
+<td><strong>[JA]</strong> / <strong>[EN]</strong></td>
+<td>Japanese or English source</td>
+</tr>
+</tbody>
+</table></div>
+<p>In the CSV files, a value carrying one of the uncertainty markers ([unconfirmed], [?], [conflict], [snippet], [inferred]) is never stored as a number. It sits in the row's <code>note</code> column, and the number column is left blank. Charts are drawn only from the number columns.</p>
+<h2 id="how-the-datasets-were-built">How the datasets were built</h2>
+<p>The CSVs in <code>data/</code> were transcribed from the tables in the research notes, one dataset per file, with the numbers exactly as the research gives them. Units were made explicit (for example "$54.5K" became 54500 in a column labelled US dollars), but no value was rounded, interpolated, or filled in for a missing year. Where a source gives a range ("$416M-$433M") or a split value, the number column is blank and the text goes in <code>note</code>. <code>data/catalog.json</code> describes each dataset: title, description, columns and units, source URLs, a confidence rating and caveats.</p>
+<h2 id="dataset-confidence">Datasets and confidence</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Dataset</th><th>Rows</th><th>Confidence</th><th>Main caveat</th></tr></thead>
+<tbody>
+<tr><td><a href="data.html#super_bowl_us_audience">Super Bowl US TV audience, I (1967) to LX (2026)</a></td><td>60</td><td><span class="badge high">high</span></td><td>Single compilation source (Wikipedia, using Nielsen data); not checked game by game against Nielsen.</td></tr>
+<tr><td><a href="data.html#nfl_regular_season_tv">NFL regular-season TV averages</a></td><td>10</td><td><span class="badge medium">medium</span></td><td>No continuous year-by-year series was found in free sources; only the seasons listed here.</td></tr>
+<tr><td><a href="data.html#nfl_salary_cap">NFL salary cap by year, 1994-2026</a></td><td>33</td><td><span class="badge high">high</span></td><td>2010 was an uncapped year, so it has no value.</td></tr>
+<tr><td><a href="data.html#nfl_average_salary">NFL average salary over time</a></td><td>26</td><td><span class="badge medium">medium</span></td><td>The series count differently (bonuses, roster base); compare within a series, not across.</td></tr>
+<tr><td><a href="data.html#nfl_minimum_salary">NFL minimum salary over time</a></td><td>10</td><td><span class="badge medium">medium</span></td><td>2020-2026 values are computed from the term sheet&#39;s increases (+$100K, +$50K, then +$45K a year), not read from a published table.</td></tr>
+<tr><td><a href="data.html#nfl_league_revenue">NFL league revenue over time</a></td><td>8</td><td><span class="badge low">low</span></td><td>No free year-by-year revenue series exists (Statista is paywalled; S&amp;P Global was blocked).</td></tr>
+<tr><td><a href="data.html#nfl_national_revenue_per_team">NFL national money per team</a></td><td>6</td><td><span class="badge medium">medium</span></td><td>TV money and total national revenue are different measures; the 2025 value is a lower bound (&#39;more than $450M&#39;).</td></tr>
+<tr><td><a href="data.html#nfl_media_rights_deals">National media-rights deals by era</a></td><td>19</td><td><span class="badge medium">medium</span></td><td>Totals mix packages differently by era (some include cable, some do not); 2014-22 total counts broadcast only.</td></tr>
+<tr><td><a href="data.html#nfl_franchise_values">NFL franchise values over time</a></td><td>20</td><td><span class="badge medium">medium</span></td><td>Forbes pages were blocked (403); Forbes figures come via Quartz&#39;s write-up.</td></tr>
+<tr><td><a href="data.html#nfl_league_size">NFL league size over time</a></td><td>6</td><td><span class="badge high">high</span></td><td>Only the steps in the research table; intermediate years (for example 1961, 1966-68 additions) are not listed as rows.</td></tr>
+<tr><td><a href="data.html#nfl_international_games">NFL regular-season games outside the US, 2005-2026</a></td><td>65</td><td><span class="badge high">high</span></td><td>Attendance is set mostly by stadium capacity: international games sell out.</td></tr>
+<tr><td><a href="data.html#nfl_games_in_japan">NFL games in Japan, 1976-2005</a></td><td>14</td><td><span class="badge medium">medium</span></td><td>Crowds were found for only one game (1976); 1989 has two conflicting figures; 1990-2005 crowds were not found.</td></tr>
+<tr><td><a href="data.html#nfl_cte_brain_bank">CTE in donated brains of former NFL players (Boston University)</a></td><td>3</td><td><span class="badge high">high</span></td><td>Donated brains, often from families who already suspected disease: these shares do not measure how common CTE is among all players.</td></tr>
+<tr><td><a href="data.html#nfl_concussion_measures">NFL concussion settlement and safety figures</a></td><td>10</td><td><span class="badge high">high</span></td><td>The 2025 season&#39;s total concussion count was not found in the pages opened.</td></tr>
+<tr><td><a href="data.html#japan_registered_players">Japan registered American football players over time</a></td><td>10</td><td><span class="badge medium">medium</span></td><td>Two counting methods (JAFA&#39;s own history pages and the SSF survey) are mixed; read it as a trend, not exact year-on-year change.</td></tr>
+<tr><td><a href="data.html#japan_players_by_level">Japan registered players by level</a></td><td>10</td><td><span class="badge medium">medium</span></td><td>No yearly breakdown by level after 2010 was found.</td></tr>
+<tr><td><a href="data.html#japan_big_game_attendance">Japan big-game attendance: single games</a></td><td>41</td><td><span class="badge medium">medium</span></td><td>Announced crowds, mostly rounded.</td></tr>
+<tr><td><a href="data.html#japan_bowl_attendance_by_era">Japan bowl attendance by era</a></td><td>21</td><td><span class="badge medium">medium</span></td><td>Ranges summarise JAFA&#39;s yearly results tables; individual years can fall outside them (for example 40,000 in 1955).</td></tr>
+<tr><td><a href="data.html#jafa_revenue_fy2025">JAFA income and spending, FY2025 (April 2025 - March 2026)</a></td><td>13</td><td><span class="badge high">high</span></td><td>Sub-lines do not add up to their parents; the rest is &#39;other&#39; lines not itemised in the research.</td></tr>
+<tr><td><a href="data.html#japan_sport_participation">Japan registered players by sport, FY2024</a></td><td>7</td><td><span class="badge medium">medium</span></td><td>Federations count registration differently; multiples are approximate.</td></tr>
+<tr><td><a href="data.html#japanese_players_north_america">Japanese players in North American football and the NFL&#39;s pathways</a></td><td>9</td><td><span class="badge medium">medium</span></td><td>Not a complete list: US college walk-ons and other camp invitees were not researched.</td></tr>
+<tr><td><a href="data.html#japan_serious_accidents">Japan serious football accidents</a></td><td>14</td><td><span class="badge medium">medium</span></td><td>Periods and scopes differ by source; the rows are not a single time series.</td></tr>
+<tr><td><a href="data.html#japan_tv_ratings">Japan TV ratings found for football</a></td><td>3</td><td><span class="badge medium">medium</span></td><td>No rating was found for the Rice Bowl, the Koshien Bowl, NFL games on NHK or the Super Bowl in Japan.</td></tr>
+<tr><td><a href="data.html#nfl_season_attendance">NFL regular-season attendance over time</a></td><td>12</td><td><span class="badge medium">medium</span></td><td>Pro Football Reference was read through Internet Archive snapshots; its 1960-1990 snapshots had no table, so 1960 and 1989 are rounded Wikipedia figures.</td></tr>
+<tr><td><a href="data.html#gallup_favorite_sport">Gallup: Americans&#39; favourite sport to watch</a></td><td>11</td><td><span class="badge medium">medium</span></td><td>Football has been first in all 23 Gallup readings since 1972 (average 38% in season, 32% out of season); only some readings are listed here.</td></tr>
+<tr><td><a href="data.html#nfl_record_contracts">Record NFL contracts (highest average per year when signed)</a></td><td>22</td><td><span class="badge medium">medium</span></td><td>Derived by the research from nflverse/Over The Cap contract history (largest APY signed in each year that set a new high).</td></tr>
+<tr><td><a href="data.html#ja_wikipedia_pageviews">Japanese Wikipedia pageviews for football articles</a></td><td>120</td><td><span class="badge high">high</span></td><td>Wikipedia traffic falls across almost every article, so compare shares between articles, not raw totals.</td></tr>
+
+</tbody></table></div>
+<h2 id="confidence-levels">Confidence levels</h2>
+<ul>
+<li><strong>High:</strong> an official or primary source (league, federation, court-supervised settlement, survey body, data API), or a well-maintained compilation checked against a second source.</li>
+<li><strong>Medium:</strong> reliable secondary sources (sports-business press, Wikipedia) without a full second check, or a dataset that mixes counting methods or relies on the research's own arithmetic.</li>
+<li><strong>Low:</strong> a few confirmed points with most of the series missing or resting on snippets and estimates.</li>
+</ul>
+<h2 id="source-types">Source types</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Examples</th>
+<th>How they are used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>League and federation</td>
+<td>NFL.com, NFL Football Operations, NFL media releases, NFL Japan, JAFA year pages, reports and accounts, NFA (X League) releases and spectator surveys</td>
+<td>Primary facts and figures</td>
+</tr>
+<tr>
+<td>Courts, government and public bodies</td>
+<td>NFL Concussion Settlement site, House Judiciary staff report (June 2026), MEXT, Japan's gBizINFO register, OpenSecrets</td>
+<td>Legal, policy and money facts</td>
+</tr>
+<tr>
+<td>Survey bodies</td>
+<td>Gallup, Sasakawa Sports Foundation, Central Research Services, Mitsubishi UFJ Research &amp; Consulting with Macromill, Spectrum Reach (Scarborough), Nielsen</td>
+<td>Interest, participation and audience measures</td>
+</tr>
+<tr>
+<td>Research literature</td>
+<td>Boston University CTE studies (via Wikipedia), PubMed, the Journal of the Japanese Society of Athletic Training</td>
+<td>Health and safety</td>
+</tr>
+<tr>
+<td>Press</td>
+<td>Sportico, ESPN, CNBC, Sports Business Journal, Yahoo Sports, Jiji, Nikkei, Asahi, Yomiuri, Nikkan Sports, Gendai</td>
+<td>Business, media and recent events</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>English and Japanese Wikipedia</td>
+<td>History, people and compiled tables; cross-checked where possible</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>nflverse (Over The Cap), Wikimedia pageviews API, Pro Football Reference via the Internet Archive</td>
+<td>Contracts, pageviews, attendance</td>
+</tr>
+<tr>
+<td>Fan and secondary sites</td>
+<td>luckyshow.org, amefootojisan.com, Kashikapedia, fan blogs</td>
+<td>Lowest weight; always marked <strong class="marker m-unconfirmed">[?]</strong> when a figure rests on them alone</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="known-gaps">Known gaps</h2>
+<ul>
+<li><strong>No published NFL audience figures for Japan.</strong> No Video Research rating was found for any NFL game or Super Bowl in Japan, and DAZN, Nittele G+ and NFL Game Pass publish no Japan viewer or subscriber numbers. The NFL's country breakdown of the Super Bowl LVIII audience did not list Japan (<a href="https://nfljapan.com/headlines/98308" rel="noopener">NFL Japan, Mar 2024</a>).</li>
+<li><strong>The NFL does not publish an international revenue share.</strong> International game income flows into national revenue, which is split equally among the 32 clubs, but no figure for the international part was found.</li>
+<li><strong>No free year-by-year league revenue series.</strong> Statista is paywalled and S&amp;P Global's page was blocked, so only scattered years have figures.</li>
+<li><strong>Crowds for the American Bowls in Japan, 1990-2005,</strong> were not found game by game; the 1989 figure has two conflicting sources.</li>
+<li><strong>Japanese TV ratings:</strong> none were found for the Rice Bowl, the Koshien Bowl or NFL games on NHK; only three football-related ratings from 1976, 1977 and 2005.</li>
+<li><strong>X League attendance</strong> before 2024 is not published as season totals; recent averages rest on a fan blog and a paywalled summary.</li>
+<li><strong>Fan demographics:</strong> US fan age, gender and ethnicity data is mostly proprietary (Nielsen, the NFL); one Scarborough profile was found. Japan has no NFL fan-population figure in the surveys checked.</li>
+<li><strong>Other gaps:</strong> stadium-subsidy totals; NFL pension amounts; the 2025 season's concussion total; Japanese injury totals by year after 2010; Japanese college programme budgets and coaching salaries; per-club X League revenue; game-by-game crowds for the Koshien Bowl in many early years.</li>
+</ul>
+<h2 id="rebuilding">Rebuilding</h2>
+<p>The site is static. <code>src/build.py</code> reads <code>content/</code> and <code>data/</code> and writes the pages to <code>docs/</code>. See the README for the commands.</p>
+
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <p>Compiled November 2026 from public sources. Research notes, not official NFL or JAFA data. Figures link to the sources they came from; the <a href="methodology.html">methodology</a> explains how they were gathered and how far to trust them.</p>
+  </div>
+</footer>
+
+</body>
+</html>

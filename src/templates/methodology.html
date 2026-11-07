@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+{{ intro | safe }}
+<h2 id="dataset-confidence">Datasets and confidence</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Dataset</th><th>Rows</th><th>Confidence</th><th>Main caveat</th></tr></thead>
+<tbody>
+{% for d in datasets %}<tr><td><a href="data.html#{{ d.id }}">{{ d.title }}</a></td><td>{{ d.rows }}</td><td><span class="badge {{ d.confidence }}">{{ d.confidence }}</span></td><td>{{ d.caveats[0] }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+{{ rest | safe }}
+{% endblock %}

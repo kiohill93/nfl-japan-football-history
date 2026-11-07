@@ -1,0 +1,6 @@
+<figure class="chart" id="chart-{{ c.id }}">
+  <div class="chart-title">{{ c.title }}</div>
+  {% if c.subtitle %}<div class="chart-sub">{{ c.subtitle }}</div>{% endif %}
+  <div class="plot" data-chart="{{ c.id }}" role="img" aria-label="Chart: {{ c.title }}. The same data is in the nearby table and the CSV."></div>
+  <figcaption><span class="caveat">{{ c.caveat }}</span> Data: <a href="data.html#{{ c.dataset }}">{{ c.dataset_title }}</a> (<a href="data/{{ c.dataset }}.csv">CSV</a>).</figcaption>
+</figure>
