@@ -9,7 +9,7 @@ Compiled 2026-11-05 from the NFL and Japan research on this site. One doc for le
 - **Name order:** Part 1 writes Japanese names given name first (Takayuki Hioki); Part 2 uses family name first, as in Japan (Hioki Takayuki), with kanji.
 - **Markers:** **[unconfirmed]**, **[?]** = not confirmed in an opened source; **[conflict]** = sources disagree; **[JA]**/**[EN]** = Japanese or English source.
 
-**People in both stories:** Roger Goodell, Brett Gosper, Frank Takahashi (promoter of the 1976 Tokyo game), Takayuki Hioki (Sports Branding Japan, the NFL's Japan liaison office), and the Rams (Stan Kroenke; Stefanie Chen, head of Rams international).
+**People in both stories:** Roger Goodell, Brett Gosper, Frank Takahashi (promoter of the 1976 Tokyo game), Takayuki Hioki (Sports Branding Japan, the NFL's Japan liaison office), and the Rams (Stan Kroenke; Stephanie Cheng, head of Rams international).
 
 ## Contents
 - [Part 1: The NFL](#part-1-the-nfl)
@@ -295,7 +295,7 @@ League-wide NFL figures are in Part 1 above. NFL people appear here only where t
 | # | Name | Years | Role | What they did | Source |
 | --- | --- | --- | --- | --- | --- |
 | 49 | Brett Gosper | b. 1959 | NFL head of Europe and Asia-Pacific | Australian ex-rugby player and advertising executive, then CEO of World Rugby 2012–2021, which included the 2019 Rugby World Cup in Japan (Japan v Scotland drew a record 54.8 million Japanese viewers, per Wikipedia). Joined the NFL in January 2021. Said in Aug 2026 that Japan is "a market of interest"; points to Ohtani-era interest in US sport. | [EN] [en.wikipedia Brett Gosper](https://en.wikipedia.org/wiki/Brett_Gosper); [Reuters via The Star, 2026-08-29](https://www.thestar.com.my/sport/others/2026/08/29/football-nfl-eyes-expansion-in-japan-as-international-games-reach-record-high) |
-| 50 | Stefanie Chen | — | Head of Rams international | Launched the Rams' Japan LINE account in April 2024 and presented Los Angeles as a "gateway to Asia". The Rams hold the NFL's Japan marketing rights. | [JA] [NFL Japan](https://nfljapan.com/headlines/98979) (Rams LINE launch) |
+| 50 | Stephanie Cheng | — | VP and Head of International & Special Projects, Los Angeles Rams | Launched the Rams' Japan LINE account in April 2024 and presented Los Angeles as a "gateway to Asia". The Rams hold the NFL's Japan marketing rights. | [JA] [NFL Japan](https://nfljapan.com/headlines/98979) (Rams LINE launch) |
 | 51 | Roger Goodell | — | NFL commissioner | Said in late Oct 2026 that a Tokyo game could come "next year or the year after". | [JA] Jiji 2026-10-30 (file 02) |
 
 ### Sources
