@@ -72,3 +72,9 @@ Before publishing, run the privacy check. It reads its patterns from `tools/priv
 - **Known gaps** are listed on the methodology page: for example, no published NFL audience figures for Japan and no NFL figure for international revenue.
 
 Corrections with a better public source are welcome.
+
+## Licence
+
+The research text in `content/`, the datasets in `data/` and the built site in `docs/` are licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/); see `LICENSE`. You may share and adapt them, including commercially, if you give credit, link to this repository or its site, and say whether you made changes.
+
+The licence covers this compilation and its wording. It does not cover the sources it cites: short quoted phrases, and the facts, figures and pages they come from, belong to their owners. The build code in `src/` and `tools/` is shared under the same terms.
